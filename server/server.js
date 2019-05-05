@@ -12,6 +12,7 @@ import config from "./config";
 
 // Load api
 import auth from "./routes/auth.routes";
+import post from "./routes/post.routes";
 
 const app = new Express();
 
@@ -24,6 +25,7 @@ app.use(cors());
 app.use(compression());
 app.use(Express.static(path.resolve(__dirname, "../dist/client")));
 app.use("/auth", auth);
+app.use("/post", post);
 
 // Set native promises as mongoose promise
 mongoose.Promise = global.Promise;
@@ -49,11 +51,11 @@ app.listen(config.port, error => {
   }
 });
 // Serve web
-app.use(Express.static(path.join(__dirname, "/../client/build")));
+// app.use(Express.static(path.join(__dirname, "/../client/build")));
 
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "/../client/build", "index.html"));
-});
+// app.get("*", (req, res) => {
+//   res.sendFile(path.join(__dirname, "/../client/build", "index.html"));
+// });
 
 export default app;
 

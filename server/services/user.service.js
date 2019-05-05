@@ -29,13 +29,18 @@ export async function addUser(body) {
   const newUser = new User({
     username: body.username,
     password: body.password,
-    phone: body.phone
+    phone: body.phone,
+    address: body.address,
+    fullname: body.fullname,
+    isMale: body.isMale
   });
 
   // Sanitialize raw data
   newUser.username = sanitizeHtml(newUser.username);
   newUser.phone = sanitizeHtml(newUser.phone);
   newUser.password = sanitizeHtml(newUser.password);
+  newUser.address = sanitizeHtml(newUser.address);
+  newUser.fullname = sanitizeHtml(newUser.fullname);
 
   // Encrypted user password
   await bcryptjs

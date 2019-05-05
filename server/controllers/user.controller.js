@@ -7,10 +7,10 @@ import * as UserServices from "../services/user.service";
  * @return void
  */
 export async function registerUser(req, res) {
-  const { username, password, phone } = req.body;
+  const { username, password, phone, fullname, address, isMale } = req.body;
 
   // Checking empty params
-  if (!username || !password || !phone)
+  if (!username || !password || !phone || !fullname || !address || !isMale)
     return res.status(403).json({ errors: "Missing required data field(s)." });
 
   // checking if user already existed
