@@ -1,11 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-<<<<<<< HEAD
-import Login from './Login.js';
-=======
 import Home from './home/home.js'
->>>>>>> 2ac105cc7ecbb01bc10aff464a60cf25f62f9050
+import Post from './post/post.js'
 
 function App() {
   return (
@@ -25,7 +22,7 @@ function App() {
           Learn React
         </a>
       </header>
-      <Login></Login>
+      <Post/>
     </div>
   );
 }
