@@ -83,7 +83,8 @@ export async function signToken(body) {
     })
     .catch(err => console.log("error-password", err));
 
-  if (!userpassword) return "User not found.", null, null;
+  if (!userpassword)
+    return { err: "User not found.", userId: null, signedToken: null };
 
   // sign token
   let err,

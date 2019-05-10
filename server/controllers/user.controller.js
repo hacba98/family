@@ -40,9 +40,11 @@ export async function loginUser(req, res) {
   if (!username || !password)
     return res.status(403).json({ errors: "Missing required field(s)." });
 
-  let { err, signedToken, userId } = await UserServices.signToken(req.body);
-  if (err) return res.status(500).json({ errors: err });
+  let ret = await UserServices.signToken(req.body);
+  if (ret.err) return res.status(500).json({ errors: ret.err });
   return res
     .status(200)
-    .json({ data: { id: userId, authorization: "Bearer " + signedToken } });
+    .json({
+      data: { id: ret.userId, authorization: "Bearer " + ret.signedToken }
+    });
 }
