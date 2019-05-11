@@ -4,8 +4,10 @@ const Schema = mongoose.Schema;
 const UserSchema = new Schema({
   username: { type: String, required: true }, // Input
   password: { type: String, required: true }, // Input
-  //address: { type: String, required: true }, // Input
-  phone: { type: Number, required: true } // Input
+  address: { type: String }, // Input
+  fullname: { type: String },
+  phone: { type: Number }, // Input
+  isMale: { type: Boolean }
 });
 
 const User = mongoose.model("User", UserSchema);
