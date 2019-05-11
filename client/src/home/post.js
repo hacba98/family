@@ -1,8 +1,5 @@
 import React from 'react';
-import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Button } from 'reactstrap';
-import { Container, Row, Col } from 'reactstrap';
 import logo_user from './img/user.png'
-import { SSL_OP_TLS_ROLLBACK_BUG } from 'constants';
 
 class Post extends React.Component {
     render() {
@@ -18,7 +15,7 @@ class Post extends React.Component {
             <p class="card-text">Description</p>
             <div class="card-text"><i class="fa fa-map-marker fa-2x"></i> Location</div>
             <div class="card-text">
-                <i class="fa fa-star fa-2x" style={{color: rgb(0,255,255);}}></i>
+                <i class="fa fa-star fa-2x" style={{color: 'yellow'}}></i>
                 <i class="fa fa-star fa-2x"></i>
                 <i class="fa fa-star fa-2x"></i>
                 <i class="fa fa-star fa-2x"></i>
