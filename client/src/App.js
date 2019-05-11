@@ -1,20 +1,56 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Home from './home/home.js'
-import Post from './post/post.js'
-import Mess from './mess/mess.js'
+import React, { Component } from "react";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <Home/>
-      
-      <Mess/>
-    </div>
-  );
+import logo from "./logo.svg";
+import "./App.css";
+import Home from "./home/home.js";
+import Post from "./post/post.js";
+import LoginPage from "./pages/login";
+
+class App extends Component {
+  state = {
+    isLogin: false,
+    username: "",
+    token: ""
+  };
+
+  loginSuccess = (value, username, token) => {
+    if (this.state.isLogin)
+      this.setState({ isLogin: value, username: username, token: token });
+    else this.setState({ isLogin: false, username: "" });
+  };
+
+  render() {
+    return (
+      // <div className="App">
+      //   <Home/>
+      //   <header className="App-header">
+      //     <img src={logo} className="App-logo" alt="logo" />
+      //     <p>
+      //       Edit <code>src/App.js</code> and save to reload.
+      //     </p>
+      //     <a
+      //       className="App-link"
+      //       href="https://reactjs.org"
+      //       target="_blank"
+      //       rel="noopener noreferrer"
+      //     >
+      //       Learn React
+      //     </a>
+      //   </header>
+      //   <Post/>
+      // </div>
+      <BrowserRouter>
+        <Switch>
+          <Route
+            path="/login"
+            render={() => <LoginPage loginSuccess={this.loginSuccess} />}
+          />
+          <Route path="/home" component={Home} />
+        </Switch>
+      </BrowserRouter>
+    );
+  }
 }
-
-
 
 export default App;

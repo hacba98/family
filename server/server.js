@@ -6,16 +6,21 @@ import bodyParser from "body-parser";
 import path from "path";
 import cors from "cors";
 import passport from "passport";
+import morgan from "morgan";
 
 // Load some config
 import config from "./config";
 
 // Load api
 import auth from "./routes/auth.routes";
+import post from "./routes/post.routes";
 
 const app = new Express();
 
 // Body parser middleware
+app.use(
+  morgan(":method :url :status :res[content-length] - :response-time ms")
+);
 app.use(bodyParser.urlencoded({ limit: "20mb", extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
@@ -24,6 +29,7 @@ app.use(cors());
 app.use(compression());
 app.use(Express.static(path.resolve(__dirname, "../dist/client")));
 app.use("/auth", auth);
+app.use("/post", post);
 
 // Set native promises as mongoose promise
 mongoose.Promise = global.Promise;
@@ -49,11 +55,11 @@ app.listen(config.port, error => {
   }
 });
 // Serve web
-//app.use(Express.static(path.join(__dirname, "/../client/build")));
+// app.use(Express.static(path.join(__dirname, "/../client/build")));
 
-//app.get("*", (req, res) => {
-//  res.sendFile(path.join(__dirname, "/../client/build", "index.html"));
-//});
+// app.get("*", (req, res) => {
+//   res.sendFile(path.join(__dirname, "/../client/build", "index.html"));
+// });
 
 export default app;
 

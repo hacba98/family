@@ -7,10 +7,10 @@ import * as UserServices from "../services/user.service";
  * @return void
  */
 export async function registerUser(req, res) {
-  const { username, password, phone } = req.body;
+  const { username, password, phone, fullname, address, isMale } = req.body;
 
   // Checking empty params
-  if (!username || !password || !phone)
+  if (!username || !password || !phone || !fullname || !address || !isMale)
     return res.status(403).json({ errors: "Missing required data field(s)." });
 
   // checking if user already existed
@@ -40,9 +40,11 @@ export async function loginUser(req, res) {
   if (!username || !password)
     return res.status(403).json({ errors: "Missing required field(s)." });
 
-  let { err, signedToken, userId } = await UserServices.signToken(req.body);
-  if (err) return res.status(500).json({ errors: err });
+  let ret = await UserServices.signToken(req.body);
+  if (ret.err) return res.status(500).json({ errors: ret.err });
   return res
     .status(200)
-    .json({ data: { id: userId, authorization: "Bearer " + signedToken } });
+    .json({
+      data: { id: ret.userId, authorization: "Bearer " + ret.signedToken }
+    });
 }
