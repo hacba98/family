@@ -31,7 +31,7 @@ export default class LoginPage extends Component {
 
   onFormSubmit = async e => {
     e.preventDefault();
-    if (this.state.username == "" || this.state.password == "") {
+    if (this.state.username === "" || this.state.password === "") {
       return alert("Username and password can not be empty");
     }
     this.logInUser(this.state.username, this.state.password);

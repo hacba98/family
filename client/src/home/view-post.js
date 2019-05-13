@@ -8,7 +8,6 @@ import {
 
 import React, {Component} from "react"
 import NavBar from './navbar'
-import Post from './post'
 import logo_user from './img/user.png'
 import CommentBox from './comment-box'
 import CommentItem from './comment-item'

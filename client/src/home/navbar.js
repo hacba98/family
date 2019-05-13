@@ -1,19 +1,5 @@
 import React from 'react';
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem } from 'reactstrap';
-
-import { Button } from 'reactstrap';
-
+import {NavLink} from "react-router-dom";
 import 'font-awesome/css/font-awesome.min.css';
 
 export default class NavBar extends React.Component {
@@ -33,7 +19,7 @@ export default class NavBar extends React.Component {
   render() {
     return (
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Family</a>
+        <a class="navbar-brand" href="/">Family</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -45,18 +31,15 @@ export default class NavBar extends React.Component {
           
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="#"><i class="fa fa-fw fa-envelope"></i>Thông báo</a>
+              <a class="nav-link" href="/"><i class="fa fa-fw fa-envelope"></i>Thông báo</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"><i class="fa fa-fw fa-user"></i>Cá nhân</a>
+              <a class="nav-link" href="/"><i class="fa fa-fw fa-user"></i>Cá nhân</a>
             </li>
           </ul>
-
-          <button class="btn btn-info" >Đăng tin</button>
-        
+          <NavLink to="/post"><button class="btn btn-info" >Đăng tin</button></NavLink>
         </div>
       </nav>
-
     );
   }
 }

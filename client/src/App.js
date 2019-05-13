@@ -1,12 +1,10 @@
 import React, { Component } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-
-import logo from "./logo.svg";
 import "./App.css";
 import Home from "./home/home.js";
-import Post from "./post/post.js";
 import LoginPage from "./pages/login";
 import Register from "./pages/register";
+import Post from "./home/view-post.js";
 
 class App extends Component {
   state = {
@@ -23,24 +21,6 @@ class App extends Component {
 
   render() {
     return (
-      // <div className="App">
-      //   <Home/>
-      //   <header className="App-header">
-      //     <img src={logo} className="App-logo" alt="logo" />
-      //     <p>
-      //       Edit <code>src/App.js</code> and save to reload.
-      //     </p>
-      //     <a
-      //       className="App-link"
-      //       href="https://reactjs.org"
-      //       target="_blank"
-      //       rel="noopener noreferrer"
-      //     >
-      //       Learn React
-      //     </a>
-      //   </header>
-      //   <Post/>
-      // </div>
       <BrowserRouter>
         <Switch>
           <Route
@@ -48,7 +28,8 @@ class App extends Component {
             render={() => <LoginPage loginSuccess={this.loginSuccess} />}
           />
           <Route path="/register" component={Register} />
-          <Route path="/home" component={Home} />
+          <Route path="/post" component = {Post}></Route>
+          <Route path="/" component={Home} />
         </Switch>
       </BrowserRouter>
     );

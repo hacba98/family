@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Redirect, Link } from "react-router-dom";
 import Axios from "axios";
-
 import "./login.scss";
 
 export default class Register extends Component {
@@ -26,10 +25,10 @@ export default class Register extends Component {
 
   onFormSubmit = async e => {
     e.preventDefault();
-    if (this.state.username == "" || this.state.password == "") {
+    if (this.state.username === "" || this.state.password === "") {
       return alert("Username and password can not be empty");
     }
-    if (this.state.confirmPassword != this.state.password) {
+    if (this.state.confirmPassword !== this.state.password) {
       return alert("Confirm password is not match with password");
     }
     Axios.post("/auth/register", {
@@ -45,7 +44,7 @@ export default class Register extends Component {
         this.setState({ directToLogin: true });
       })
       .catch(error => {
-        if (error.response.status != 200)
+        if (error.response.status !== 200)
           alert(
             error.response.data.errors ||
               "Ops! Something went wrong. Please try again."
