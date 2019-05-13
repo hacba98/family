@@ -42,9 +42,7 @@ export async function loginUser(req, res) {
 
   let ret = await UserServices.signToken(req.body);
   if (ret.err) return res.status(500).json({ errors: ret.err });
-  return res
-    .status(200)
-    .json({
-      data: { id: ret.userId, authorization: "Bearer " + ret.signedToken }
-    });
+  return res.status(200).json({
+    data: { id: ret.userId, authorization: "Bearer " + ret.signedToken }
+  });
 }

@@ -6,6 +6,7 @@ import "./App.css";
 import Home from "./home/home.js";
 import Post from "./post/post.js";
 import LoginPage from "./pages/login";
+import Register from "./pages/register";
 
 class App extends Component {
   state = {
@@ -46,6 +47,7 @@ class App extends Component {
             path="/login"
             render={() => <LoginPage loginSuccess={this.loginSuccess} />}
           />
+          <Route path="/register" component={Register} />
           <Route path="/home" component={Home} />
         </Switch>
       </BrowserRouter>

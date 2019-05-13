@@ -86,7 +86,10 @@ export default class LoginPage extends Component {
             Login
           </button>
           <hr />
-          <Link to="/sign-up" className="btn btn-block btn-outline-danger mt-3">
+          <Link
+            to="/register"
+            className="btn btn-block btn-outline-danger mt-3"
+          >
             Create a new account
           </Link>
         </form>
