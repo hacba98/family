@@ -16,6 +16,7 @@ const PostSchema = new Schema({
     default: "UNKNOWN"
   },
   product_name: { type: String, required: true },
+  title: { type: String, required: true },
   description: { type: String, required: true },
   phone: { type: String, required: true },
   status: {

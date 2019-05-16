@@ -20,8 +20,11 @@ router
     PostController.acceptRequest
   );
 
-// GET request
+// GET request - get all basic information
 router.route("/get").get(PostController.getRequests);
+
+// GET request - get detail information
+router.route("/getDetail/:post_id").get(PostController.getDetail);
 
 // GET complete request - called when done
 router

@@ -45,5 +45,9 @@ export function completeRequest(post_id) {
 }
 
 export function viewAll() {
-  return Post.find({});
+  return Post.find({}).select("_id title description address");
+}
+
+export function viewDetail(post_id) {
+  return Post.findById(post_id);
 }

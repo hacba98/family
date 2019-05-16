@@ -1,4 +1,5 @@
 import * as PostService from "../services/post.service";
+import Post from "../models/post";
 
 export function postRequest(req, res) {
   const { user_id } = req.params;
@@ -36,6 +37,14 @@ export function getRequests(req, res) {
   return PostService.viewAll()
     .then(result => res.status(200).json({ data: result }))
     .catch(err => console.log(err));
+}
+
+export function getDetail(req, res) {
+  const { post_id } = req.params;
+
+  return PostService.viewDetail(post_id)
+    .then(result => res.status(200).json({ data: result }))
+    .catch(err => res.status(500).json({ error: err }));
 }
 
 export function completeRequest(req, res) {

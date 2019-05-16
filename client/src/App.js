@@ -14,7 +14,7 @@ class App extends Component {
   };
 
   loginSuccess = (value, username, token) => {
-    if (this.state.isLogin)
+    if (value)
       this.setState({ isLogin: value, username: username, token: token });
     else this.setState({ isLogin: false, username: "" });
   };
@@ -27,9 +27,12 @@ class App extends Component {
             path="/login"
             render={() => <LoginPage loginSuccess={this.loginSuccess} />}
           />
+          <Route path="/home" render={() => <Home {...this.state} />} />
           <Route path="/register" component={Register} />
-          <Route path="/post" component = {Post}></Route>
-          <Route path="/" component={Home} />
+          <Route path="/post" render={() => <Post {...this.state} />} />
+          <Route
+            render={() => <LoginPage loginSuccess={this.loginSuccess} />}
+          />
         </Switch>
       </BrowserRouter>
     );
