@@ -209,7 +209,7 @@ class BinhNongLanh extends React.Component {
 						Chúng tôi cam kết:
 					</h3>
 					<ul>
-						<li>Rada chỉ tuyển dụng đội ngũ thợ sửa bình nóng lạnh tay nghề cao và các trung tâm dịch vụ có uy tín hoạt động lâu năm trên thị trường được khách hàng đánh giá cao.</li>
+						<li>Chúng tôi chỉ tuyển dụng đội ngũ thợ sửa bình nóng lạnh tay nghề cao và các trung tâm dịch vụ có uy tín hoạt động lâu năm trên thị trường được khách hàng đánh giá cao.</li>
 						<li>Không thu tiền nếu không khắc phục được sự cố</li>
 						<li>Hoàn tiền nếu trục trặc trong vòng 1 tháng</li>
 					</ul>
@@ -219,11 +219,10 @@ class BinhNongLanh extends React.Component {
 					</h3>
 					<ul>
 						<li>Chỉ sử dụng dịch vụ nếu hai bên thống nhất phương án sửa chữa, giá thành chi tiết.</li>
-						<li>Chat/gọi cho Rada nếu thấy điều gì bất thường.</li>
+						<li>Chat/gọi cho chúng tôi nếu thấy điều gì bất thường.</li>
 						<li>Đánh giá nhà cung cấp sau khi hoàn thành.</li>
-						<li>Khiếu nại với Rada nếu cảm thấy dịch vụ chưa tốt.</li>
+						<li>Khiếu nại với chúng tôi nếu cảm thấy dịch vụ chưa tốt.</li>
 						<li>Hóa đơn (VAT): Bạn có thể yêu cầu xuất hóa đơn, nếu dịch vụ không đồng ý, bạn có thể từ chối kết nối và đánh giá, chấm điểm để chuyển sang dịch vụ khác.</li>
-						<li>Cộng gold, tích lũy điểm thưởng: Chỉ khách hàng dùng app Rada mới được hệ thống tự độ tích lũy điểm thưởng để quy đổi các giá trị gia tăng trên hệ thống. Rada không áp dụng chính sách tích lũy khi khách hàng đặt qua hotline, web hoặc các ứng dụng liên kết.</li>
 					</ul>
 
 					<h3 style={{ color: "green", fontWeight: "bold" }}>

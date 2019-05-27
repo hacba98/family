@@ -12,8 +12,7 @@ import withStyles from "@material-ui/core/styles/withStyles";
 import style from "views/Charts/style.jsx";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-import tivi from "assets/img/image/tivi.jpg"
-import tivi01 from "assets/img/image/tivi01.jpg"
+import suakhoa from "assets/img/image/suakhoa.jpg"
 
 import icon01 from "assets/img/icon/icon01.png";
 import icon02 from "assets/img/icon/icon02.jpg";
@@ -30,7 +29,7 @@ import AccountBox from "@material-ui/icons/AccountBox";
 import Build from "@material-ui/icons/Build";
 
 
-class SuaTv extends React.Component {
+class SuaKhoa extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -76,7 +75,7 @@ class SuaTv extends React.Component {
 						<div id="carousel-id" className="carousel slide" data-ride="carousel">
 							<div className="carousel-inner">
 								<div className="item active">
-									<img alt="Third slide" src={tivi} />
+									<img alt="Third slide" src={suakhoa} />
 									<div className="container">
 										<div className="carousel-caption">
 										</div>
@@ -87,7 +86,7 @@ class SuaTv extends React.Component {
 					</div>
 
 					<div className="page-header">
-						<h2 style={{ color: "green", fontWeight: "bold" }}>Sửa TV tại nhà</h2>
+						<h2 style={{ color: "green", fontWeight: "bold" }}>Thợ sửa khóa</h2>
 					</div>
 
 					<Button color="rose" style={{ width: "100%", height: "55px" }}>
@@ -173,50 +172,53 @@ class SuaTv extends React.Component {
 					</div>
 
 					<h3 style={{ color: "green", fontWeight: "bold" }}>
-						Sửa Tivi
+						Thợ sửa khóa
 					</h3>
 
 					<p>
-					Mô tả thông tin về chủng loại TV bạn đang sử dụng cần sửa chữa hoặc bảo dưỡng, tình trạng hoạt động, hiện 
-					tượng mà bạn gặp phải, ứng dụng sẽ chuyển thông tin này đến đội ngũ thợ sửa TV uy tín mà chúng tôi tuyển 
-					dụng kỹ càng, họ sẽ nghiên cứu và phản hồi bạn về phương án xử lý. Nếu bạn đồng ý, dịch vụ sẽ được triển 
-					khai.
+						Mô tả thông tin về thương hiệu khóa mà bạn cần sửa chữa nếu có thể, tình trạng hoạt động, hiện tượng mà bạn gặp phải, ứng dụng sẽ chuyển thông tin này đến đội ngũ thợ sửa chữa uy tín mà chúng tôi tuyển dụng kỹ càng, họ sẽ nghiên cứu và phản hồi bạn về phương án xử lý. Nếu bạn đồng ý, dịch vụ sẽ được triển khai.
 					</p>
 					<br />
 
 					<h3 style={{ color: "green", fontWeight: "bold" }}>
-						Giá thành sửa tivi tham khảo:
+						Giá thành sửa khóa tại nhà:
 					</h3>
 
 					<ul>
-						<li><p>Sửa tivi không vào điện (không có đèn báo nguồn): hỏng nguồn, giá sửa <a style={{ color: "red" }}>300.000 - 400.000đ</a>.</p></li>
-						<li><p>Có đèn báo, đèn báo nhấp nháy, không hình không tiếng: hỏng boad nguồn hoặc boad cao áp, giá sửa từ <a style={{ color: "red" }}>300.000 - 400.000đ</a>.</p></li>
-						<li><p>Sửa tivi có tiếng không có hình, có hình 2-5s tắt: hỏng boad nguồn cao, giá sửa từ <a style={{ color: "red" }}>300.000 - 600.000đ</a>.</p></li>
-						<li>Sửa tivi hình bị bóng ma, lem màu, trắng hình, lang ben: hỏng boad tcon (car màn hình), giá sửa từ 300.000 - 500,000đ. (tivi Samsung model: LA32R71B, LA32R81B, LA32S81B, LA32A330J1, LA37A350, LA37A530, LA37R71B, LA32R81B, Samsung 40”, 46”. Sony model: KLV32S400A, KLV32V400A, KLV32T400A KLV37S400A, KLV37V400A, KLV37T400A, KLV37S310A, LG 32”, 37”, 40”…</li>
-						<li><p>Mất hết đài hoặc mất 1 số đài: hỏng bộ thu sóng, giá sửa từ <a style={{ color: "red" }}>300.000 - 400.000đ</a>.</p></li>
-						<li><p>Không điều khiển bằng remoter được (remeter còn tốt): hỏng mắt nhận hồng ngoại, giá sửa từ <a style={{ color: "red" }}>200.000 - 300.000đ</a>.</p></li>
-						<li><p>Gãy đầu cắm cáp, giá sửa từ <a style={{ color: "red" }}>150.000 - 300.000đ</a>.</p></li>
-						<li><p>Máy bị bong, rộp lớp dán màn hình hoặc bị hẹp góc nhìn (nhìn thẳng thì được, nhìn hơi xéo thì bị bóng ma, lem màu) Sony: KLV32BX300, KLV32EX300,  KLV32BX550…Samsung: LA32R71B, LA32R81B, LA32S81B, LA32A330J1… Giá sửa từ <a style={{ color: "red" }}>800.000đ - 1.000.000đ</a>. (riêng máy bị lỗi này thì phải đem về mới dán lại màn hình được)</p></li>
-						<li><p>Máy có hình không tiếng: hỏng loa - thay loa, giá thay <a style={{ color: "red" }}>300.000 - 400.000đ/1 cặp loa</a>.</p></li>
-						<li><p>Kiểm tra, chuẩn đoán tại nhà: <a style={{ color: "red" }}>150.000đ/lần</a> (chi phí này áp dụng trong trường hợp bạn chỉ khám/kiểm tra mà không sử dụng dịch vụ sửa chữa của thợ, trường hợp sửa chữa sẽ không tính chi phí này)</p></li>
+						<li><p>Công dịch vụ tại nhà tối thiểu: <a style={{ color: "red" }}>150.000đ chi phí này áp dụng cho 1 lần thợ đến nhà để phục vụ khách hàng bao gồm việc khảo sát hoặc chi phí sửa chữa nhỏ có giá trị dưới 150.000đ</a></p></li>
+						<li>
+							<b>Khóa cửa nắm tròn:</b>
+							<ul>
+								<li><p>Mở cửa: <a style={{ color: "red" }}>50.000đ - 120.000đ/lần</a>.</p></li>
+								<li><p>Sửa + đánh chìa mới: <a style={{ color: "red" }}>80.000đ - 150.000đ</a>.</p></li>
+								<li><p>Thay mới khóa Thái Lan: <a style={{ color: "red" }}>170.000đ - 250.000đ</a>.</p></li>
+								<li><p>Thay mới khóa Việt Tiệp: <a style={{ color: "red" }}>220.000đ - 340.000đ</a>.</p></li>
+								<li><p>Thay mới khóa Nikke (Nhật): <a style={{ color: "red" }}>250.000đ - 350.000đ</a>.</p></li>
+							</ul>
+						</li>
+						<li>
+							<b>Khóa tay gạt:</b>
+							<ul>
+								<li><p>Các loại khóa tay gạt bình thường: <a style={{ color: "red" }}>80.000đ - 150.000đ</a>.</p></li>
+								<li><p>Các loại khóa tay gạt cao cấp: <a style={{ color: "red" }}>120.000đ - 230.000đ</a>.</p></li>
+							</ul>
+						</li>
 					</ul>
 
-					<img src={tivi01} alt="..." style={{ marginLeft: "10%" }} />
-					
 					<h3 style={{ color: "green", fontWeight: "bold" }}>
 						Chúng tôi cam kết:
 					</h3>
 					<ul>
-						<li>Chúng tôi chỉ tuyển dụng đội ngũ thợ sửa tivi tay nghề cao và các trung tâm dịch vụ, bảo hành tivi có uy tín.</li>
-						<li>Nhà cung cấp dịch vụ sửa tivi sẽ không được phép thu tiền nếu không khắc phục được sự cố như đã trao đổi và thống nhất với khách hàng.</li>
-						<li>Dịch vụ sửa tivi cam kết hoàn tiền nếu trục trặc trong vòng 1 tháng và bảo hành cho trường hợp sửa chữa tối thiểu 1 năm.</li>
+						<li>Dịch vụ chỉ được triển khai khi hai bên thỏa thuận</li>
+						<li>Thợ sửa điện tại nhà không được phép lấy công nếu sửa chữa không đạt yêu cầu như đã thỏa thuận.</li>
+						<li>Bảo hành, bảo trì miễn phí trong 1 năm cho các nội dung thực hiện.</li>
 					</ul>
 
 					<h3 style={{ color: "green", fontWeight: "bold" }}>
 						Lưu ý:
 					</h3>
 					<ul>
-						<li style={{ color: "red" }}>Các dịch vụ không tiếp nhận sửa tivi sử dụng bóng hình CRT (TV dầy): TV dầy là các ti vi đời cũ, hiện tại có giá trị trên thị trường khá thấp nếu bán lại đồng thời sử dụng linh kiện điện tử cũ, khó kiếm linh kiện thay thế đồng thời việc sửa chữa khá phức tạp. Chúng tôi khuyến cáo khách hàng nên thay thế lên TV LCD, LED có diện tích sử dụng tiết kiệm hơn đồng thời cũng có giá khá thấp đối với những máy đã qua sử dụng.</li>
+						<li style={{ color: "red" }}>Giá mở khóa đơn giản chỉ là 50.000đ tuy nhiên công thợ tối thiểu cho một lần phục vụ là 150.000đ/lần vì vậy bạn nên nhờ thợ kiểm tra, tra dầu hoặc siết lại các ổ khóa khác để tối ưu tiền công mà mình phải chi trả.</li>
 						<li>Chỉ sử dụng dịch vụ nếu hai bên thống nhất phương án sửa chữa, giá thành chi tiết.</li>
 						<li>Chat/gọi cho chúng tôi nếu thấy điều gì bất thường.</li>
 						<li>Đánh giá nhà cung cấp sau khi hoàn thành.</li>
@@ -238,14 +240,14 @@ class SuaTv extends React.Component {
 						</thead>
 						<tbody>
 							<tr>
-								<td><img src={avt01} alt="..." style={{height: "25px", marginLeft: "10%",}}/></td>
+								<td><img src={avt01} alt="..." style={{ height: "25px", marginLeft: "10%", }} /></td>
 								<td>dieuhoa360.com</td>
 								<td>Điện Lạnh Quang Thiện</td>
-								<td><Icon style={{marginLeft: "20%"}}>grade</Icon><Icon>grade</Icon><Icon>grade</Icon><Icon>grade</Icon><Icon>grade</Icon></td>
+								<td><Icon style={{ marginLeft: "20%" }}>grade</Icon><Icon>grade</Icon><Icon>grade</Icon><Icon>grade</Icon><Icon>grade</Icon></td>
 							</tr>
 						</tbody>
 					</table>
-			
+
 				</GridItem>
 
 				<GridItem xs>
@@ -255,4 +257,4 @@ class SuaTv extends React.Component {
 	}
 }
 
-export default withStyles(style)(SuaTv);
+export default withStyles(style)(SuaKhoa);

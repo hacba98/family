@@ -25,9 +25,16 @@ import DichVu05 from "views/Charts/DichVu05.jsx";
 import Calendar from "views/Calendar/Calendar.jsx";
 import Widgets from "views/Widgets/Widgets.jsx";
 import pagesRoutes from "./pages.jsx";
+
 import SuaDieuHoa from "views/Charts/SuaDieuHoa.jsx";
 import SuaTv from "views/Charts/SuaTv.jsx";
 import BinhNongLanh from "views/Charts/BinhNongLanh.jsx";
+import SuaDien from "views/Charts/SuaDien.jsx";
+import SuaKhoa from "views/Charts/SuaKhoa.jsx";
+import BomNuoc from "views/Charts/BomNuoc.jsx";
+import Camera from "views/Charts/Camera.jsx";
+import TinhIn from "views/Charts/TinhIn.jsx";
+import PhanMem from "views/Charts/PhanMem.jsx";
 
 // @material-ui/icons
 import DashboardIcon from "@material-ui/icons/Dashboard";
@@ -53,6 +60,30 @@ var dashRoutes = [
   {
     path: "/binh_nong_lanh",
     component: BinhNongLanh,
+  },
+  {
+    path: "/sua_dien",
+    component: SuaDien,
+  },
+  {
+    path: "/sua_khoa",
+    component: SuaKhoa,
+  },
+  {
+    path: "/bom_nuoc",
+    component: BomNuoc,
+  },
+  {
+    path: "/camera",
+    component: Camera,
+  },
+  {
+    path: "/tinh_in",
+    component: TinhIn,
+  },
+  {
+    path: "/phan_mem",
+    component: PhanMem,
   },
   {
     path: "/thiet_bi_gia_dinh",

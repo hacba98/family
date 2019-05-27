@@ -11,7 +11,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import style from "views/Charts/style.jsx";
 
 import suadien from "assets/img/image/suadien.jpg";
-import khoacua from "assets/img/image/khoacua.jpg";
+import suakhoa from "assets/img/image/suakhoa.jpg";
 import bomnuoc from "assets/img/image/bomnuoc.jpg";
 import ongnuoc from "assets/img/image/ongnuoc.jpg";
 import chongtham from "assets/img/image/chongtham.jpg";
@@ -65,7 +65,7 @@ class DichVu02 extends React.Component {
 			},
 			{
 				name: "Thợ sửa khóa",
-				img: khoacua
+				img: suakhoa
 			},
 			{
 				name: "Sửa máy bơm nước",

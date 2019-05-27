@@ -12,8 +12,7 @@ import withStyles from "@material-ui/core/styles/withStyles";
 import style from "views/Charts/style.jsx";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-import tivi from "assets/img/image/tivi.jpg"
-import tivi01 from "assets/img/image/tivi01.jpg"
+import bomnuoc from "assets/img/image/bomnuoc.jpg"
 
 import icon01 from "assets/img/icon/icon01.png";
 import icon02 from "assets/img/icon/icon02.jpg";
@@ -30,7 +29,7 @@ import AccountBox from "@material-ui/icons/AccountBox";
 import Build from "@material-ui/icons/Build";
 
 
-class SuaTv extends React.Component {
+class BomNuoc extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -76,7 +75,7 @@ class SuaTv extends React.Component {
 						<div id="carousel-id" className="carousel slide" data-ride="carousel">
 							<div className="carousel-inner">
 								<div className="item active">
-									<img alt="Third slide" src={tivi} />
+									<img alt="Third slide" src={bomnuoc} />
 									<div className="container">
 										<div className="carousel-caption">
 										</div>
@@ -87,7 +86,7 @@ class SuaTv extends React.Component {
 					</div>
 
 					<div className="page-header">
-						<h2 style={{ color: "green", fontWeight: "bold" }}>Sửa TV tại nhà</h2>
+						<h2 style={{ color: "green", fontWeight: "bold" }}>Sửa máy bơm nước</h2>
 					</div>
 
 					<Button color="rose" style={{ width: "100%", height: "55px" }}>
@@ -173,50 +172,47 @@ class SuaTv extends React.Component {
 					</div>
 
 					<h3 style={{ color: "green", fontWeight: "bold" }}>
-						Sửa Tivi
+						Sửa máy bơm
 					</h3>
 
 					<p>
-					Mô tả thông tin về chủng loại TV bạn đang sử dụng cần sửa chữa hoặc bảo dưỡng, tình trạng hoạt động, hiện 
-					tượng mà bạn gặp phải, ứng dụng sẽ chuyển thông tin này đến đội ngũ thợ sửa TV uy tín mà chúng tôi tuyển 
-					dụng kỹ càng, họ sẽ nghiên cứu và phản hồi bạn về phương án xử lý. Nếu bạn đồng ý, dịch vụ sẽ được triển 
-					khai.
+					Mô tả thông tin về loại máy bơm nước mà bạn cần sửa chữa, tình trạng hoạt động, hiện tượng mà bạn gặp phải, ứng dụng sẽ chuyển thông tin này đến đội ngũ thợ sửa chữa uy tín mà chúng tôi tuyển dụng kỹ càng, họ sẽ nghiên cứu và phản hồi bạn về phương án xử lý. Nếu bạn đồng ý, dịch vụ sẽ được triển khai.
 					</p>
 					<br />
 
 					<h3 style={{ color: "green", fontWeight: "bold" }}>
-						Giá thành sửa tivi tham khảo:
+					Giá tham khảo một số công việc:
 					</h3>
 
 					<ul>
-						<li><p>Sửa tivi không vào điện (không có đèn báo nguồn): hỏng nguồn, giá sửa <a style={{ color: "red" }}>300.000 - 400.000đ</a>.</p></li>
-						<li><p>Có đèn báo, đèn báo nhấp nháy, không hình không tiếng: hỏng boad nguồn hoặc boad cao áp, giá sửa từ <a style={{ color: "red" }}>300.000 - 400.000đ</a>.</p></li>
-						<li><p>Sửa tivi có tiếng không có hình, có hình 2-5s tắt: hỏng boad nguồn cao, giá sửa từ <a style={{ color: "red" }}>300.000 - 600.000đ</a>.</p></li>
-						<li>Sửa tivi hình bị bóng ma, lem màu, trắng hình, lang ben: hỏng boad tcon (car màn hình), giá sửa từ 300.000 - 500,000đ. (tivi Samsung model: LA32R71B, LA32R81B, LA32S81B, LA32A330J1, LA37A350, LA37A530, LA37R71B, LA32R81B, Samsung 40”, 46”. Sony model: KLV32S400A, KLV32V400A, KLV32T400A KLV37S400A, KLV37V400A, KLV37T400A, KLV37S310A, LG 32”, 37”, 40”…</li>
-						<li><p>Mất hết đài hoặc mất 1 số đài: hỏng bộ thu sóng, giá sửa từ <a style={{ color: "red" }}>300.000 - 400.000đ</a>.</p></li>
-						<li><p>Không điều khiển bằng remoter được (remeter còn tốt): hỏng mắt nhận hồng ngoại, giá sửa từ <a style={{ color: "red" }}>200.000 - 300.000đ</a>.</p></li>
-						<li><p>Gãy đầu cắm cáp, giá sửa từ <a style={{ color: "red" }}>150.000 - 300.000đ</a>.</p></li>
-						<li><p>Máy bị bong, rộp lớp dán màn hình hoặc bị hẹp góc nhìn (nhìn thẳng thì được, nhìn hơi xéo thì bị bóng ma, lem màu) Sony: KLV32BX300, KLV32EX300,  KLV32BX550…Samsung: LA32R71B, LA32R81B, LA32S81B, LA32A330J1… Giá sửa từ <a style={{ color: "red" }}>800.000đ - 1.000.000đ</a>. (riêng máy bị lỗi này thì phải đem về mới dán lại màn hình được)</p></li>
-						<li><p>Máy có hình không tiếng: hỏng loa - thay loa, giá thay <a style={{ color: "red" }}>300.000 - 400.000đ/1 cặp loa</a>.</p></li>
-						<li><p>Kiểm tra, chuẩn đoán tại nhà: <a style={{ color: "red" }}>150.000đ/lần</a> (chi phí này áp dụng trong trường hợp bạn chỉ khám/kiểm tra mà không sử dụng dịch vụ sửa chữa của thợ, trường hợp sửa chữa sẽ không tính chi phí này)</p></li>
+						<li><p>Công dịch vụ sửa điện tại nhà tối thiểu: <a style={{ color: "red" }}>200.000đ chi phí này áp dụng cho 1 lần thợ đến nhà để phục vụ khách hàng bao gồm việc khảo sát hoặc chi phí sửa chữa nhỏ có giá trị dưới 200.000đ</a></p></li>
+						<li><p>Lắp đặt đồng hồ điện: <a style={{ color: "red" }}>80.000 - 150.0000đ/bộ</a>.</p></li>
+						<li><p>Lắp mới bộ bóng đèn (gồm công tắc): <a style={{ color: "red" }}>80.000 - 100.0000đ/bộ</a>.</p></li>
+						<li><p>Thay bóng đèn hư: <a style={{ color: "red" }}>20.000 - 50.000đ/bóng</a>.</p></li>
+						<li><p>Lắp mới ổ cắm điện: <a style={{ color: "red" }}>50.000 - 100.000đ/cái</a>.</p></li>
+						<li><p>Thay ổ cắm, công tắc: <a style={{ color: "red" }}>30.000 - 60.000đ/cái</a>.</p></li>
+						<li><p>Thay CB phụ: <a style={{ color: "red" }}>80.000 - 100.000đ/cái</a>.</p></li>
+						<li><p>Lắp quạt trần: <a style={{ color: "red" }}>100.000 - 150.000đ/cái</a>.</p></li>
+						<li><p>Dây điện thông dụng loại lõi 2mm, mua lẻ: <a style={{ color: "red" }}>15.000đ/m</a>.</p></li>
+						<li><p>Dây điện thông dụng loại lõi 1,5mm, mua lẻ: <a style={{ color: "red" }}>12.000đ/m</a>.</p></li>
+						<li><p>Dây điện thông dụng loại lõi 1mm, mua lẻ: <a style={{ color: "red" }}>10.000đ/m</a>.</p></li>
+						<li><p>APTOMAT thông dụng 1 pha, mua lẻ (6A - 25A): <a style={{ color: "red" }}>100.000đ/cái</a>.</p></li>
+						<li><p>APTOMAT thông dụng 2 pha, mua lẻ (6A - 63A): <a style={{ color: "red" }}>200.000đ/cái</a>.</p></li>
+						<li><p>Các công việc khác chưa được mô tả: <a style={{ color: "red" }}>Theo thực tế</a>.</p></li>
 					</ul>
 
-					<img src={tivi01} alt="..." style={{ marginLeft: "10%" }} />
-					
 					<h3 style={{ color: "green", fontWeight: "bold" }}>
 						Chúng tôi cam kết:
 					</h3>
 					<ul>
-						<li>Chúng tôi chỉ tuyển dụng đội ngũ thợ sửa tivi tay nghề cao và các trung tâm dịch vụ, bảo hành tivi có uy tín.</li>
-						<li>Nhà cung cấp dịch vụ sửa tivi sẽ không được phép thu tiền nếu không khắc phục được sự cố như đã trao đổi và thống nhất với khách hàng.</li>
-						<li>Dịch vụ sửa tivi cam kết hoàn tiền nếu trục trặc trong vòng 1 tháng và bảo hành cho trường hợp sửa chữa tối thiểu 1 năm.</li>
+						<li>Thợ sửa điện tại nhà không được phép lấy công nếu sửa chữa không đạt yêu cầu như đã thỏa thuận.</li>
+						<li>Bảo hành, bảo trì miễn phí trong 1 năm cho các nội dung thực hiện.</li>
 					</ul>
 
 					<h3 style={{ color: "green", fontWeight: "bold" }}>
 						Lưu ý:
 					</h3>
 					<ul>
-						<li style={{ color: "red" }}>Các dịch vụ không tiếp nhận sửa tivi sử dụng bóng hình CRT (TV dầy): TV dầy là các ti vi đời cũ, hiện tại có giá trị trên thị trường khá thấp nếu bán lại đồng thời sử dụng linh kiện điện tử cũ, khó kiếm linh kiện thay thế đồng thời việc sửa chữa khá phức tạp. Chúng tôi khuyến cáo khách hàng nên thay thế lên TV LCD, LED có diện tích sử dụng tiết kiệm hơn đồng thời cũng có giá khá thấp đối với những máy đã qua sử dụng.</li>
 						<li>Chỉ sử dụng dịch vụ nếu hai bên thống nhất phương án sửa chữa, giá thành chi tiết.</li>
 						<li>Chat/gọi cho chúng tôi nếu thấy điều gì bất thường.</li>
 						<li>Đánh giá nhà cung cấp sau khi hoàn thành.</li>
@@ -224,6 +220,26 @@ class SuaTv extends React.Component {
 						<li>Hóa đơn (VAT): Bạn có thể yêu cầu xuất hóa đơn, nếu dịch vụ không đồng ý, bạn có thể từ chối kết nối và đánh giá, chấm điểm để chuyển sang dịch vụ khác.</li>
 					</ul>
 
+					<h3 style={{ color: "green", fontWeight: "bold" }}>
+					Một số điểm bạn có thể kiểm tra làm trước khi gọi thợ:
+					</h3>
+					<div style={{ color: "red" }}>
+						<p>Hệ thống máy bơm trong gia đình thường được thiết kế dành cho các chức năng chính như hút nước từ nguồn vào bể chứa cho những khu vực có nguồn nước yếu, đẩy nước lên bể chứa trên cao để sử dụng. Hệ thống thường bao gồm từ 1 đến 2 máy bơm, các hệ thống phao tự ngắt, phao chống cạn ở bể chứa ngầm. Nếu máy bơm của bạn không chạy, việc đầu tiên bạn cần kiểm tra các phao xem liệu nó có thỏa mãn các điều kiện được thiết lập hay không, đặc biệt là phao chống cạn ở bể ngầm vì rất có thể nước nguồn bị mất lâu ngày, bể cạn không còn hút được nữa dẫn đến máy bơm ngừng chạy.</p>
+						<p>Các khóa van một chiều cũng cần được kiểm tra vì một số máy bơm sẽ có cảm biến lưu lượng nước, nó sẽ tự ngắt nếu bị khóa đường ống, nước không chẩy qua được.</p>
+						<p>Hệ thống đường dây điện nối giữa các phao và máy bơm cũng có thể là nguyên nhân dẫn đến không vào điện cho máy, bạn nên có một bút thử điện để kiểm tra các đầu tiếp nối trong ổ điện cắm máy bơm, đầu tiếp nối điện trong các phao tự ngắt. Việc này các bạn có thể làm được mà chưa cần đến thợ. Nó cũng nhằm xác định chính xác nguyên nhân để khi gọi thợ họ có thể nhanh chóng giải quyết vấn đề của bạn, tránh mất thời gian của cả hai bên.</p>
+						<p>Nếu vấn đề nằm ở hệ thống đường dây dẫn giữa các phao và máy bơm bạn cần gọi thợ điện và lưu ý chuẩn bị bản vẽ sơ đồ đường điện trong nhà để họ có thể xử lý một cách chính xác. Các đường dây dẫn, ổ cắm cũng có khả năng hỏng hóc rất cao vì nguyên nhân ẩm mốc, co ngót, lún nứt hay các sửa chữa khác vô tình làm hỏng nó.</p>
+						<p>Phao tự ngắn thông thường hoạt động trong môi trường ẩm ướt cao nó cũng rất có thể bị hỏng nếu không phải bao tốt. Bạn có thể kiểm tra xem có còn đóng ngắt được không (dĩ nhiên là bạn cần có chút kiến thức về điện, bút thử điện, to vít...), nếu nó hỏng thì bạn cũng có thể tự mua ngoài các cửa hàng điện nước dân dụng mà thay thế.</p>
+						<p>Bạn cũng có thể lấy ổ điện, cắm trực tiếp máy bơm vào để xem máy có chạy không. Nếu không chạy thì sẽ cần gọi thợ.</p>
+						<p>Cấu tạo máy bơm chính bao gồm motor, cánh quạt đẩy nước, tụ đề (giống như tụ của cái quạt gió, nhưng công suất lớn hơn), khoang chứa nước mồi. Trường hợp máy bơm vẫn chạy mà không có tiếng ve ve kêu to, bạn có thể mở khoang chứa nước mồi ra để kiểm tra, nếu không có nước, bạn có thể đổ nước mồi vào đó, nó chạy được thì đóng nắp khoang vào.</p>
+						<p>Trường hợp máy bơm bị hỏng thì sẽ có một số bệnh chính như sau:</p>
+						<ul>
+							<li>Mòn hoặc gẫy cánh quạt đẩy nước làm tắc, máy bơm không chạy được hoặc chạy mà không đẩy nước được, thợ phải thay thế nó.</li>
+							<li>Mòn khoang chứa cánh quạt nước, bệnh này nặng hơn, nếu có thể thì thợ sẽ phải thay khoang chứa, nếu không tháo được thì coi như máy không còn sử dụng được.</li>
+							<li>Chết tụ đề máy bơm, trường hợp này dễ, chỉ cần thay tụ mới với thông số quy định.</li>
+							<li>Cháy motor, dĩ nhiên là có thể cuốn lại motor máy bơm tuy nhiên việc này khá phức tạp, lâu và mất thời gian, giá trị cũng không rẻ trong khi giá trị của máy bơm cũng không cao lắm, bạn cần thay máy mới.    </li>
+							<li>Hỏng cảm biến: trong một số máy bơm cao cấp sẽ có các cảm biến lưu lượng nước, nếu chất lượng đường nước không tốt nó sẽ bị bám cặn canxi, cặn bẩn hoặc bị hỏng. Việc thay cảm biến cũng tương đối khó vì vậy bạn cũng cần lưu ý kiểm tra chất lượng nước bằng dịch vụ xét nghiệm nước sinh hoạt để tránh các vấn đề này xẩy ra.</li>
+						</ul>
+					</div>
 					<h3 style={{ color: "green", fontWeight: "bold" }}>
 						Top dịch vụ tin cậy
 					</h3>
@@ -255,4 +271,4 @@ class SuaTv extends React.Component {
 	}
 }
 
-export default withStyles(style)(SuaTv);
+export default withStyles(style)(BomNuoc);
