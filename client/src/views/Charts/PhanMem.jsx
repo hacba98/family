@@ -12,8 +12,7 @@ import withStyles from "@material-ui/core/styles/withStyles";
 import style from "views/Charts/style.jsx";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-import suadien from "assets/img/image/suadien.jpg"
-import suadien01 from "assets/img/image/suadien01.jpg"
+import phanmem from "assets/img/image/phanmem.jpg"
 
 import icon01 from "assets/img/icon/icon01.png";
 import icon02 from "assets/img/icon/icon02.jpg";
@@ -30,7 +29,7 @@ import AccountBox from "@material-ui/icons/AccountBox";
 import Build from "@material-ui/icons/Build";
 
 
-class SuaDien extends React.Component {
+class PhanMem extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -76,7 +75,7 @@ class SuaDien extends React.Component {
 						<div id="carousel-id" className="carousel slide" data-ride="carousel">
 							<div className="carousel-inner">
 								<div className="item active">
-									<img alt="Third slide" src={suadien} />
+									<img alt="Third slide" src={phanmem} />
 									<div className="container">
 										<div className="carousel-caption">
 										</div>
@@ -87,7 +86,7 @@ class SuaDien extends React.Component {
 					</div>
 
 					<div className="page-header">
-						<h2 style={{ color: "green", fontWeight: "bold" }}>Sửa điện tại nhà</h2>
+						<h2 style={{ color: "green", fontWeight: "bold" }}>Cài đặt, cấu hình phần mềm</h2>
 					</div>
 
 					<Button color="rose" style={{ width: "100%", height: "55px" }}>
@@ -173,50 +172,46 @@ class SuaDien extends React.Component {
 					</div>
 
 					<h3 style={{ color: "green", fontWeight: "bold" }}>
-						Sửa điện
+					Máy tính quá chậm? Máy tính bị virus?
 					</h3>
 
-					<p>
-					Mô tả thông tin về hệ thống điện bạn cần sửa chữa, tình trạng hoạt động, hiện tượng mà bạn gặp phải, ứng dụng sẽ chuyển thông tin này đến đội ngũ thợ sửa chữa điện tại nhà uy tín mà chúng tôi tuyển dụng kỹ càng, họ sẽ nghiên cứu và phản hồi bạn về phương án xử lý. Nếu bạn đồng ý, dịch vụ sẽ được triển khai đến nhà bạn.
+					<p style={{ color: "red" }}>
+					Bạn muốn cài đặt lại hệ điều hành? Cài thêm phần mềm mới cho máy tính? Cài đặt driver, máy in, máy quét... Hãy đặt dịch vụ và lưu ý chuyện bản quyền các bạn nhé!
 					</p>
 					<br />
 
 					<h3 style={{ color: "green", fontWeight: "bold" }}>
-						Giá tham khảo một số công việc, vật tư sửa điện tại nhà:
+					Thiết bị & mục công việc trong phạm vi:
+					</h3>
+					<ul>
+						<li>Máy tính để bàn (PC), cài đặt, sửa chữa và cấu hình phần mềm</li>
+						<li>Driver cho máy in, máy quét bao gồm cả máy in nối mạng</li>
+						<li>Hệ điều hành và các phần mềm trên hệ điều hành: Windows, Linux, MacOS</li>
+					</ul>
+
+					<h3 style={{ color: "green", fontWeight: "bold" }}>
+					Giá thành tham khảo:
 					</h3>
 
 					<ul>
-						<li><p>Công dịch vụ sửa điện tại nhà tối thiểu: <a style={{ color: "red" }}>200.000đ chi phí này áp dụng cho 1 lần thợ đến nhà để phục vụ khách hàng bao gồm việc khảo sát hoặc chi phí sửa chữa nhỏ có giá trị dưới 200.000đ</a></p></li>
-						<li><p>Lắp đặt đồng hồ điện: <a style={{ color: "red" }}>80.000 - 150.0000đ/bộ</a>.</p></li>
-						<li><p>Lắp mới bộ bóng đèn (gồm công tắc): <a style={{ color: "red" }}>80.000 - 100.0000đ/bộ</a>.</p></li>
-						<li><p>Thay bóng đèn hư: <a style={{ color: "red" }}>20.000 - 50.000đ/bóng</a>.</p></li>
-						<li><p>Lắp mới ổ cắm điện: <a style={{ color: "red" }}>50.000 - 100.000đ/cái</a>.</p></li>
-						<li><p>Thay ổ cắm, công tắc: <a style={{ color: "red" }}>30.000 - 60.000đ/cái</a>.</p></li>
-						<li><p>Thay CB phụ: <a style={{ color: "red" }}>80.000 - 100.000đ/cái</a>.</p></li>
-						<li><p>Lắp quạt trần: <a style={{ color: "red" }}>100.000 - 150.000đ/cái</a>.</p></li>
-						<li><p>Dây điện thông dụng loại lõi 2mm, mua lẻ: <a style={{ color: "red" }}>15.000đ/m</a>.</p></li>
-						<li><p>Dây điện thông dụng loại lõi 1,5mm, mua lẻ: <a style={{ color: "red" }}>12.000đ/m</a>.</p></li>
-						<li><p>Dây điện thông dụng loại lõi 1mm, mua lẻ: <a style={{ color: "red" }}>10.000đ/m</a>.</p></li>
-						<li><p>APTOMAT thông dụng 1 pha, mua lẻ (6A - 25A): <a style={{ color: "red" }}>100.000đ/cái</a>.</p></li>
-						<li><p>APTOMAT thông dụng 2 pha, mua lẻ (6A - 63A): <a style={{ color: "red" }}>200.000đ/cái</a>.</p></li>
-						<li><p>Các công việc khác chưa được mô tả: <a style={{ color: "red" }}>Theo thực tế</a>.</p></li>
+						<li><p>Kiểm tra, chuẩn đoán xử lý online qua mạng: <a style={{ color: "red" }}>110.000đ/lần</a> (chi phí này áp dụng trong trường hợp kỹ thuật viên khám/kiểm tra và sửa lỗi từ xa, bạn cần chuyển tiền trước cho dịch vụ theo thỏa thuận trước khi tiến hành)</p></li>
+						<li><p>Kiểm tra, chuẩn đoán, sửa chữa trực tiếp tại nhà: <a style={{ color: "red" }}>250.000đ/lần</a> (chi phí này tính theo ca làm việc 2 tiếng của kỹ sư hoặc kỹ thuật viên cho 1 thiết bị. Thiết bị thứ 2 trở đi trong cùng thời gian sẽ tính <a style={{ color: "red" }}>110.000đ/máy</a>.)</p></li>
+						<li><p>Bản quyền phầm mềm: Theo thực tế sử dụng và giá thị trường</p></li>
 					</ul>
 
-					<img src={suadien01} alt="..." style={{ marginLeft: "10%" }} />
-					
 					<h3 style={{ color: "green", fontWeight: "bold" }}>
 						Chúng tôi cam kết:
 					</h3>
 					<ul>
-						<li>Thợ sửa điện tại nhà không được phép lấy công nếu sửa chữa không đạt yêu cầu như đã thỏa thuận.</li>
-						<li>Bảo hành, bảo trì miễn phí trong 1 năm cho các nội dung thực hiện.</li>
+						<li>Đội ngũ kỹ sư tay nghề cao có trình độ Đại học trở lên.</li>
+						<li>Hoàn tiền nếu trục trặc trong vòng 1 tháng.</li>
 					</ul>
 
 					<h3 style={{ color: "green", fontWeight: "bold" }}>
 						Lưu ý:
 					</h3>
 					<ul>
-						<li style={{ color: "red" }}>Công thợ sửa chữa điện tối thiểu với một lần phục vụ tại nhà là 200.000đ vì vậy khi cần đấu một công tắc hay lắp một bóng điện thì bạn cũng nên nhìn quanh để xem có những vấn đề gì cần khắc phục như làm chắc lại các ổ cắm hoặc tương tự như vậy trong một lần phục vụ nhằm tối ưu chi phí cho một lần gọi thợ. Trong một tiếng phục vụ với giá thành như đã nêu trên thì sẽ không tính thêm tiền công phụ trội.</li>
+						<li>Chỉ sử dụng dịch vụ nếu hai bên thống nhất phương án sửa chữa, giá thành chi tiết.</li>
 						<li>Chỉ sử dụng dịch vụ nếu hai bên thống nhất phương án sửa chữa, giá thành chi tiết.</li>
 						<li>Chat/gọi cho chúng tôi nếu thấy điều gì bất thường.</li>
 						<li>Đánh giá nhà cung cấp sau khi hoàn thành.</li>
@@ -255,4 +250,4 @@ class SuaDien extends React.Component {
 	}
 }
 
-export default withStyles(style)(SuaDien);
+export default withStyles(style)(PhanMem);
