@@ -12,7 +12,7 @@ import withStyles from "@material-ui/core/styles/withStyles";
 import style from "views/Charts/style.jsx";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-import phanmem from "assets/img/image/phanmem.jpg"
+import cuuhoxemay from "assets/img/image/cuuhoxemay.jpg"
 
 import icon01 from "assets/img/icon/icon01.png";
 import icon02 from "assets/img/icon/icon02.jpg";
@@ -29,7 +29,7 @@ import AccountBox from "@material-ui/icons/AccountBox";
 import Build from "@material-ui/icons/Build";
 
 
-class PhanMem extends React.Component {
+class CuuHoXeMay extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -75,7 +75,7 @@ class PhanMem extends React.Component {
 						<div id="carousel-id" className="carousel slide" data-ride="carousel">
 							<div className="carousel-inner">
 								<div className="item active">
-									<img alt="Third slide" src={phanmem} />
+									<img alt="Third slide" src={cuuhoxemay} />
 									<div className="container">
 										<div className="carousel-caption">
 										</div>
@@ -86,7 +86,7 @@ class PhanMem extends React.Component {
 					</div>
 
 					<div className="page-header">
-						<h2 style={{ color: "green", fontWeight: "bold" }}>Cài đặt, cấu hình phần mềm</h2>
+						<h2 style={{ color: "green", fontWeight: "bold" }}>Cứu hộ, sửa chữa xe máy</h2>
 					</div>
 
 					<Button color="rose" style={{ width: "100%", height: "55px" }}>
@@ -172,38 +172,34 @@ class PhanMem extends React.Component {
 					</div>
 
 					<h3 style={{ color: "green", fontWeight: "bold" }}>
-					Máy tính quá chậm? Máy tính bị virus?
+					Xe của bạn không thể di chuyển được? Gặp trục trặc trên đường? Gặp tai nạn?
 					</h3>
-
-					<p style={{ color: "red" }}>
-					Bạn muốn cài đặt lại hệ điều hành? Cài thêm phần mềm mới cho máy tính? Cài đặt driver, máy in, máy quét... Hãy đặt dịch vụ và lưu ý chuyện bản quyền các bạn nhé!
+					<p>
+					Yêu cầu của bạn sẽ gửi trực tiếp đến các điểm cứu hộ xe máy, các trung tâm dịch vụ mà chúng tôi tuyển dụng kỹ càng. Các dịch vụ cứu hộ gần nhất sẽ liên hệ với bạn để sửa chữa một số lỗi đơn giản như hóc khóa, săm lốp, hết xăng... hoặc hỗ trợ bạn đưa xe đến các cửa hàng gần nhất để sửa chữa nếu có hư hỏng lớn xẩy ra.
 					</p>
+					<p>Việc sửa chữa cứu hộ xe máy trên đường chỉ nhắm vào mục đích giúp bạn có thể di chuyển được chứ không thể xử lý hoàn toàn các vấn đề phát sinh xẩy ra vì công cụ mang đi sẽ không thể đầy đủ như tại cửa hàng dịch vụ xe máy.</p>
+					<p>Việc sửa chữa xe máy trên đường giá thành có thể cao hơn bình thường vì các điểm dịch vụ cứu hộ xe máy phải di chuyển đến nơi bạn muốn sau đó sửa chữa sau đó quay về cửa hàng. Nếu bạn đồng ý với việc trả giá cao hơn thì mới nên sử dụng dịch vụ.</p>
+					<p>Cơ cấu giá thành tham khảo:</p>
+					<ul>
+						<li>Tiền công cứu hộ xe máy: từ <a style={{ color: "red" }}>90.000 đ/lần -> 150.000 đ/lần tùy thuộc khoảng cách của bạn với điểm cứu hộ được kết nối. Tiền công này được trả trực tiếp cho người cứu hộ cho 1 lần thực hiện</a>.</li>
+						<li>Thuê xe chở (nếu tai nạn): Tính riêng theo thực tế</li>
+						<li>Công sửa chữa tại chỗ tham khảo: <a style={{ color: "red" }}>Theo thực tế</a>
+							<ul>
+								<li>Vá săm xe: <a style={{ color: "red" }}>35.000đ</a></li>
+								<li>Vá dùi: <a style={{ color: "red" }}>25.000đ</a></li>
+								<li>Thay săm xe: <a style={{ color: "red" }}>100.000đ</a></li>
+								<li>Đổ xăng: <a style={{ color: "red" }}>Theo thực tế</a></li>
+							</ul>
+						</li>
+						<li>Công sửa chữa tại cửa hàng: <a style={{ color: "red" }}>Theo thực tế</a></li>
+					</ul>
 					<br />
-
-					<h3 style={{ color: "green", fontWeight: "bold" }}>
-					Thiết bị & mục công việc trong phạm vi:
-					</h3>
-					<ul>
-						<li>Máy tính để bàn (PC), cài đặt, sửa chữa và cấu hình phần mềm</li>
-						<li>Driver cho máy in, máy quét bao gồm cả máy in nối mạng</li>
-						<li>Hệ điều hành và các phần mềm trên hệ điều hành: Windows, Linux, MacOS</li>
-					</ul>
-
-					<h3 style={{ color: "green", fontWeight: "bold" }}>
-					Giá thành tham khảo:
-					</h3>
-
-					<ul>
-						<li><p>Kiểm tra, chuẩn đoán xử lý online qua mạng: <a style={{ color: "red" }}>110.000đ/lần</a> (chi phí này áp dụng trong trường hợp kỹ thuật viên khám/kiểm tra và sửa lỗi từ xa, bạn cần chuyển tiền trước cho dịch vụ theo thỏa thuận trước khi tiến hành)</p></li>
-						<li><p>Kiểm tra, chuẩn đoán, sửa chữa trực tiếp tại nhà: <a style={{ color: "red" }}>250.000đ/lần</a> (chi phí này tính theo ca làm việc 2 tiếng của kỹ sư hoặc kỹ thuật viên cho 1 thiết bị. Thiết bị thứ 2 trở đi trong cùng thời gian sẽ tính <a style={{ color: "red" }}>110.000đ/máy</a>.)</p></li>
-						<li><p>Bản quyền phầm mềm: Theo thực tế sử dụng và giá thị trường</p></li>
-					</ul>
 
 					<h3 style={{ color: "green", fontWeight: "bold" }}>
 						Chúng tôi cam kết:
 					</h3>
 					<ul>
-						<li>Đội ngũ kỹ sư tay nghề cao có trình độ Đại học trở lên.</li>
+						<li>Đội ngũ tay nghề cao.</li>
 						<li>Hoàn tiền nếu trục trặc trong vòng 1 tháng.</li>
 					</ul>
 
@@ -249,4 +245,4 @@ class PhanMem extends React.Component {
 	}
 }
 
-export default withStyles(style)(PhanMem);
+export default withStyles(style)(CuuHoXeMay);

@@ -12,7 +12,9 @@ import withStyles from "@material-ui/core/styles/withStyles";
 import style from "views/Charts/style.jsx";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-import phanmem from "assets/img/image/phanmem.jpg"
+import dapdien from "assets/img/image/dapdien.jpg"
+import dapdien01 from "assets/img/image/dapdien01.jpg"
+import dapdien02 from "assets/img/image/dapdien02.jpg"
 
 import icon01 from "assets/img/icon/icon01.png";
 import icon02 from "assets/img/icon/icon02.jpg";
@@ -29,7 +31,7 @@ import AccountBox from "@material-ui/icons/AccountBox";
 import Build from "@material-ui/icons/Build";
 
 
-class PhanMem extends React.Component {
+class DapDien extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -75,7 +77,7 @@ class PhanMem extends React.Component {
 						<div id="carousel-id" className="carousel slide" data-ride="carousel">
 							<div className="carousel-inner">
 								<div className="item active">
-									<img alt="Third slide" src={phanmem} />
+									<img alt="Third slide" src={dapdien} />
 									<div className="container">
 										<div className="carousel-caption">
 										</div>
@@ -86,7 +88,7 @@ class PhanMem extends React.Component {
 					</div>
 
 					<div className="page-header">
-						<h2 style={{ color: "green", fontWeight: "bold" }}>Cài đặt, cấu hình phần mềm</h2>
+						<h2 style={{ color: "green", fontWeight: "bold" }}>Sửa xe đạp điện tại nhà</h2>
 					</div>
 
 					<Button color="rose" style={{ width: "100%", height: "55px" }}>
@@ -172,39 +174,77 @@ class PhanMem extends React.Component {
 					</div>
 
 					<h3 style={{ color: "green", fontWeight: "bold" }}>
-					Máy tính quá chậm? Máy tính bị virus?
+					Sửa xe đạp điện tại nhà - Đặt dịch vụ sửa chữa, bảo dưỡng, thay thế linh phụ kiện
 					</h3>
 
 					<p style={{ color: "red" }}>
-					Bạn muốn cài đặt lại hệ điều hành? Cài thêm phần mềm mới cho máy tính? Cài đặt driver, máy in, máy quét... Hãy đặt dịch vụ và lưu ý chuyện bản quyền các bạn nhé!
+					Xe đạp điện, xe máy điện, xe điện Vinfast Klara của bạn không thể di chuyển được? Bạn không tìm được cửa hàng sửa chữa uy tín, đáng tin cậy nào quanh khu vực bạn đang sinh sống? Hãy đặt dịch vụ sửa xe đạp điện tại nhà đến các trung tâm dịch vụ mà chúng tôi kết nối. Đây là các trung tâm mà chúng tôi đã thẩm tra, sẵn sàng phục vụ bạn tại nhà với thái độ cầu thị, có đầy đủ công cụ sửa chữa, được đào tạo chuyên nghiệp, bài bản và đặc biệt sử dụng hàng chính hãng, đảm bảo chất lượng.
+					</p>
+					<p>
+					Các dịch vụ sửa xe đạp điện mà chúng tôi tuyển dụng là các đơn vị cam kết tuyệt đối chất lượng, sẵn sàng bảo hành được Rada giám sát chặt chẽ trong quá trình thực hiện.
 					</p>
 					<br />
 
+					<img src={dapdien01} alt="..." style={{ marginLeft: "10%" }} />
+
 					<h3 style={{ color: "green", fontWeight: "bold" }}>
-					Thiết bị & mục công việc trong phạm vi:
+					Sửa xe đạp điện:
 					</h3>
+					<p>Bạn chỉ cần đặt bảo dưỡng, đội ngũ thợ của các trung tâm mà chúng tôi tuyển dụng sẽ bảo dưỡng xe của bạn tại nhà bao gồm các nội dung sau:​​</p>
 					<ul>
-						<li>Máy tính để bàn (PC), cài đặt, sửa chữa và cấu hình phần mềm</li>
-						<li>Driver cho máy in, máy quét bao gồm cả máy in nối mạng</li>
-						<li>Hệ điều hành và các phần mềm trên hệ điều hành: Windows, Linux, MacOS</li>
+						<li>Bảo dưỡng phanh trước.</li>
+						<li>Bảo dưỡng, tra dầu, bôi trơn các ổ trụ.</li>
+						<li>Kiểm tra hệ thống điện.</li>
+						<li>Kiểm tra ắc qui, xả, nạp.</li>
+						<li>Xiết lại các ê ku bu lông.</li>
+						<li>Kiểm tra lốp trước, sau.</li>
+						<li>Kiểm tra vòng bi trước, sau.</li>
+						<li>Kiểm tra giảm sóc trước, sau.</li>
+						<li>Chỉnh còi.</li>
+						<li>Kiểm tra sạc.</li>
+						<li>Tư vấn tình trạng xe và phương án khắc phục</li>
 					</ul>
 
 					<h3 style={{ color: "green", fontWeight: "bold" }}>
-					Giá thành tham khảo:
+					Các loại linh phụ kiện có thể thay thế tận nơi:
 					</h3>
 
 					<ul>
-						<li><p>Kiểm tra, chuẩn đoán xử lý online qua mạng: <a style={{ color: "red" }}>110.000đ/lần</a> (chi phí này áp dụng trong trường hợp kỹ thuật viên khám/kiểm tra và sửa lỗi từ xa, bạn cần chuyển tiền trước cho dịch vụ theo thỏa thuận trước khi tiến hành)</p></li>
-						<li><p>Kiểm tra, chuẩn đoán, sửa chữa trực tiếp tại nhà: <a style={{ color: "red" }}>250.000đ/lần</a> (chi phí này tính theo ca làm việc 2 tiếng của kỹ sư hoặc kỹ thuật viên cho 1 thiết bị. Thiết bị thứ 2 trở đi trong cùng thời gian sẽ tính <a style={{ color: "red" }}>110.000đ/máy</a>.)</p></li>
-						<li><p>Bản quyền phầm mềm: Theo thực tế sử dụng và giá thị trường</p></li>
+						<li>Ắc quy xe điện</li>
+						<li>Bộ nạp điện</li>
+						<li>Hệ thống phanh xe (tay phanh, dây phanh, má phanh)</li>
+						<li>Đèn chiếu sáng</li>
+						<li>Còi điện</li>
+						<li>Bộ khóa điện</li>
+						<li>Vá xe</li>
 					</ul>
+
+					<h3 style={{ color: "green", fontWeight: "bold" }}>
+					Các loại xe điện mà nhà cung cấp dịch vụ chấp nhận sửa chữa:
+					</h3>
+					<ul>
+						<li>Xe đạp điện</li>
+						<li>Xe máy điện</li>
+						<li>Xe ba bánh điện</li>
+						<li>Ô tô điện</li>
+						<li>Xe điện Drift cho trẻ em</li>
+						<li>Xe điện tự cân bằng</li>
+					</ul>
+
+					<h3 style={{ color: "green", fontWeight: "bold" }}>
+					Các nhãn hiệu xe điện được chấp nhận:
+					</h3>
+					<p>Huyndai - NIJIA - GIANT - XMEN - Zoomer X - HONDA - YAMAHA - EMOTO - VESPA - Bridgestone - LIMIA - DTP - Terra Motor - DK bikes - Fuji - HTC - Sonik - Suzika - Jili - Detech - HKbike - VN.ECAR - Xe điện Vinfast Klara
+</p>
 
 					<h3 style={{ color: "green", fontWeight: "bold" }}>
 						Chúng tôi cam kết:
 					</h3>
 					<ul>
-						<li>Đội ngũ kỹ sư tay nghề cao có trình độ Đại học trở lên.</li>
-						<li>Hoàn tiền nếu trục trặc trong vòng 1 tháng.</li>
+						<li>Chúng tôi chỉ tuyển dụng đội ngũ thợ <b>sửa chữa</b> và các trung tâm dịch vụ có tay nghề cao</li>
+						<li>Sửa đúng bệnh, đúng nội dung</li>
+						<li>Không thu tiền nếu không khắc phục được sự cố</li>
+						<li>Hoàn tiền nếu trục trặc trong vòng 1 tháng</li>
 					</ul>
 
 					<h3 style={{ color: "green", fontWeight: "bold" }}>
@@ -216,7 +256,11 @@ class PhanMem extends React.Component {
 						<li>Đánh giá nhà cung cấp sau khi hoàn thành.</li>
 						<li>Khiếu nại với chúng tôi nếu cảm thấy dịch vụ sửa TV chưa tốt để chúng tôi kiểm tra và loại bỏ các nhà cung cấp dịch vụ nếu không đáp ứng chất lượng yêu cầu.</li>
 						<li>Hóa đơn (VAT): Bạn có thể yêu cầu xuất hóa đơn, nếu dịch vụ không đồng ý, bạn có thể từ chối kết nối và đánh giá, chấm điểm để chuyển sang dịch vụ khác.</li>
+						<li>Chúng tôi không đảm bảo 100% các yêu cầu của quý khách sẽ được nhà cung cấp dịch vụ tiếp nhận vì đây là nền tảng ứng dụng chia sẻ. Các nhà cung cấp chỉ tiếp nhận yêu cầu của bạn khi họ sẵn sàng, có đủ nhân lực, vật lực cũng như khoảng cách tối ưu cho việc di chuyển.</li>
+						<li>Cứu hộ: Trong trường hợp bạn đã có cửa hàng tin cậy và quen biết, bạn có thể yêu cầu dịch vụ hỗ trợ bạn để đưa xe về nơi mà bạn tin cậy. Tuy nhiên bạn cần thỏa thuận giá thành hỗ trợ đưa xe của bạn về với nhà cung cấp. Các nhà cung cấp hoàn toàn có quyền từ chối nếu họ không thấy tiền công được bạn trả là chưa xứng đáng.</li>
 					</ul>
+
+					<img src={dapdien02} alt="..." style={{ marginLeft: "10%" }} />
 
 					<h3 style={{ color: "green", fontWeight: "bold" }}>
 						Top dịch vụ tin cậy
@@ -249,4 +293,4 @@ class PhanMem extends React.Component {
 	}
 }
 
-export default withStyles(style)(PhanMem);
+export default withStyles(style)(DapDien);

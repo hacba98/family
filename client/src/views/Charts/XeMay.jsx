@@ -12,7 +12,7 @@ import withStyles from "@material-ui/core/styles/withStyles";
 import style from "views/Charts/style.jsx";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-import phanmem from "assets/img/image/phanmem.jpg"
+import xemay from "assets/img/image/xemay.jpg"
 
 import icon01 from "assets/img/icon/icon01.png";
 import icon02 from "assets/img/icon/icon02.jpg";
@@ -29,7 +29,7 @@ import AccountBox from "@material-ui/icons/AccountBox";
 import Build from "@material-ui/icons/Build";
 
 
-class PhanMem extends React.Component {
+class XeMay extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -75,7 +75,7 @@ class PhanMem extends React.Component {
 						<div id="carousel-id" className="carousel slide" data-ride="carousel">
 							<div className="carousel-inner">
 								<div className="item active">
-									<img alt="Third slide" src={phanmem} />
+									<img alt="Third slide" src={xemay} />
 									<div className="container">
 										<div className="carousel-caption">
 										</div>
@@ -86,7 +86,7 @@ class PhanMem extends React.Component {
 					</div>
 
 					<div className="page-header">
-						<h2 style={{ color: "green", fontWeight: "bold" }}>Cài đặt, cấu hình phần mềm</h2>
+						<h2 style={{ color: "green", fontWeight: "bold" }}>Dịch vụ thuê xe máy - 120k/ngày</h2>
 					</div>
 
 					<Button color="rose" style={{ width: "100%", height: "55px" }}>
@@ -172,11 +172,14 @@ class PhanMem extends React.Component {
 					</div>
 
 					<h3 style={{ color: "green", fontWeight: "bold" }}>
-					Máy tính quá chậm? Máy tính bị virus?
+					Dịch vụ thuê xe máy theo yêu cầu
 					</h3>
 
-					<p style={{ color: "red" }}>
-					Bạn muốn cài đặt lại hệ điều hành? Cài thêm phần mềm mới cho máy tính? Cài đặt driver, máy in, máy quét... Hãy đặt dịch vụ và lưu ý chuyện bản quyền các bạn nhé!
+					<p>
+					Bạn cần thuê một chiếc xe máy để tự do di chuyển trong thành phố? Bạn muốn đi phượt bằng xe máy để ngắm cảnh thiên nhiên tươi đẹp? Bạn không muốn trả quá nhiều tiền cho việc đi lại bằng taxi?
+					</p>
+					<p>
+					Hãy đặt dịch vụ thuê xe máy từ các nhà cung cấp dịch vụ của chúng tôi bất cứ khi nào bạn cần để nhận xe sao 30 phút.
 					</p>
 					<br />
 
@@ -190,21 +193,28 @@ class PhanMem extends React.Component {
 					</ul>
 
 					<h3 style={{ color: "green", fontWeight: "bold" }}>
-					Giá thành tham khảo:
+					Chi phí giao/nhận xe tại nơi khách hàng yêu cầu
 					</h3>
-
 					<ul>
-						<li><p>Kiểm tra, chuẩn đoán xử lý online qua mạng: <a style={{ color: "red" }}>110.000đ/lần</a> (chi phí này áp dụng trong trường hợp kỹ thuật viên khám/kiểm tra và sửa lỗi từ xa, bạn cần chuyển tiền trước cho dịch vụ theo thỏa thuận trước khi tiến hành)</p></li>
-						<li><p>Kiểm tra, chuẩn đoán, sửa chữa trực tiếp tại nhà: <a style={{ color: "red" }}>250.000đ/lần</a> (chi phí này tính theo ca làm việc 2 tiếng của kỹ sư hoặc kỹ thuật viên cho 1 thiết bị. Thiết bị thứ 2 trở đi trong cùng thời gian sẽ tính <a style={{ color: "red" }}>110.000đ/máy</a>.)</p></li>
-						<li><p>Bản quyền phầm mềm: Theo thực tế sử dụng và giá thị trường</p></li>
+						<li>Giao xe/nhận xe tại nơi khách yêu cầu (1-5km): <a style={{ color: "red" }}>+ thêm 30.000đ/chiều</a></li>
+						<li>Giao xe/nhận xe tại nơi khách yêu cầu (5-10km): <a style={{ color: "red" }}>+ thêm 55.000đ/chiều</a>
+</li>
 					</ul>
 
 					<h3 style={{ color: "green", fontWeight: "bold" }}>
-						Chúng tôi cam kết:
+					Thủ tục & trình tự quá trình thuê xe
 					</h3>
+
 					<ul>
-						<li>Đội ngũ kỹ sư tay nghề cao có trình độ Đại học trở lên.</li>
-						<li>Hoàn tiền nếu trục trặc trong vòng 1 tháng.</li>
+						<li>Gửi yêu cầu dịch vụ từ ứng dụng chúng tôi đến nhà cung cấp dịch vụ gần nhất</li>
+						<li>Nhà cung cấp sẵn sàng kết nối gọi điện cho bạn để xác nhận yêu cầu và trao đổi thủ tục</li>
+						<li>Nhà cung cấp tiến hành chụp ảnh bạn, xác nhận số điện thoại (để đảm bảo tính pháp lý), viết biên nhận, hai bên ký kết</li>
+						<li>Bạn nộp tiền đặt cọc, giấy tờ và vật phẩm đặt cọc cho nhà cung cấp dịch vụ.</li>
+						<li>Nhà cung cấp đó giao xe cho bạn khi quá trình trên được xác thực.</li>
+						<li><a style={{ color: "red" }}>Bạn tự đổ xăng</a> và di chuyển trong thời gian bạn thuê xe</li>
+						<li>Kết thúc thời gian thuê, bạn mang xe đến điểm trả đã hẹn với nhà cung cấp</li>
+						<li>Hai bên xác nhận thời gian thuê, tiến hành xác nhận thời gian và quyết toán giá thành.</li>
+						<li>Giao xe lại cho nhà cung cấp, nhận lại tiền, giấy tờ & đồ vật đặt cọc.</li>
 					</ul>
 
 					<h3 style={{ color: "green", fontWeight: "bold" }}>
@@ -249,4 +259,4 @@ class PhanMem extends React.Component {
 	}
 }
 
-export default withStyles(style)(PhanMem);
+export default withStyles(style)(XeMay);
