@@ -38,6 +38,9 @@ import PhanMem from "views/Charts/PhanMem.jsx";
 import XeMay from "views/Charts/XeMay.jsx";
 import DapDien from "views/Charts/DapDien.jsx";
 import CuuHoXeMay from "views/Charts/CuuHoXeMay.jsx";
+import ChanCua from "views/Charts/ChanCua.jsx";
+import GiupViec from "views/Charts/GiupViec.jsx";
+import GiatLa from "views/Charts/GiatLa.jsx";
 
 // @material-ui/icons
 import DashboardIcon from "@material-ui/icons/Dashboard";
@@ -99,6 +102,18 @@ var dashRoutes = [
   {
     path: "/cuu_ho_xe_may",
     component: CuuHoXeMay,
+  },
+  {
+    path: "/chan_cua",
+    component: ChanCua,
+  },
+  {
+    path: "/giup_viec",
+    component: GiupViec,
+  },
+  {
+    path: "/giat_la",
+    component: GiatLa,
   },
   {
     path: "/thiet_bi_gia_dinh",
