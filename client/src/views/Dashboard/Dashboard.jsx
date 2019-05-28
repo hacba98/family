@@ -6,6 +6,10 @@ import GridItem from "components/Grid/GridItem.jsx";
 import dashboardStyle from "assets/jss/material-dashboard-pro-react/views/dashboardStyle";
 import img01 from "assets/img/image/img01.jfif"
 
+import relax from "assets/img/image/relax.jpg"
+import relax01 from "assets/img/image/relax01.jpg"
+import relax02 from "assets/img/image/relax02.png"
+
 class Dashboard extends React.Component {
   state = {
     value: 0
@@ -39,6 +43,27 @@ class Dashboard extends React.Component {
           <GridItem xs={2}>
           </GridItem>
         </GridContainer>
+        <br/>
+        <div className="row" style={{margin: "50px 30px"}}>
+          <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6" style={{padding: "100px 50px"}}>
+          <p>Hãy để cuộc sống của bạn thảnh thơi hơn!</p>
+          <p>Chúng tôi là công ty tiên phong ứng dụng nền tảng công nghệ vào ngành giúp việc gia đình ở Việt Nam, cho phép bạn cùng người giúp việc chủ động đăng và nhận việc trực tiếp trên ứng dụng web.</p>
+
+          </div>
+          <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+          <img src={relax} alt="..." width="100%" />
+          </div>
+        </div>
+
+        <div className="row" style={{margin: "50px 30px"}}>
+          <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <img src={relax01} alt="..." width="100%" />
+          </div>
+          <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <img src={relax02} alt="..." width="100%" />
+          </div>
+        </div>
+        
       </div>
     );
   }
