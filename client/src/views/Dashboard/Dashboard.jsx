@@ -23,7 +23,7 @@ class Dashboard extends React.Component {
   render() {
     // const { classes } = this.props;
     return (
-      <div>
+      <div className="bg-white">
         <GridContainer>
           <GridItem xs={2}>
           </GridItem>
