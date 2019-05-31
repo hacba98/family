@@ -7,7 +7,7 @@ import CardIcon from "components/Card/CardIcon.jsx";
 import Button from "components/CustomButtons/Button.jsx";
 import Icon from "@material-ui/core/Icon"
 import Sidebar from "./Sidebar.jsx";
-
+import {NavLink} from "react-router-dom";
 import withStyles from "@material-ui/core/styles/withStyles";
 import style from "views/Charts/style.jsx";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -44,7 +44,7 @@ class SuaDieuHoa extends React.Component {
 				<GridItem xs={0.5}>
 				</GridItem>
 				<GridItem xs={2.5}>
-					<Sidebar/>
+					<Sidebar />
 				</GridItem >
 
 				<GridItem xs={8}>
@@ -66,9 +66,11 @@ class SuaDieuHoa extends React.Component {
 						<h2 style={{ color: "green", fontWeight: "bold" }}>Sửa điều hòa, bảo dưỡng điều hòa</h2>
 					</div>
 
-					<Button color="rose" style={{ width: "100%", height: "55px" }}>
-						<p><ShoppingCart style={{ width: "30px", height: "30px", fontSize: "50" }} /> Đặt dịch vụ</p>
-					</Button>
+					<NavLink to="dat_dv_nhanh">
+						<Button color="rose" style={{ width: "100%", height: "55px" }}>
+							<p><ShoppingCart style={{ width: "30px", height: "30px", fontSize: "50" }} /> Đặt dịch vụ</p>
+						</Button>
+					</NavLink>
 					<br />
 					<br />
 					<GridContainer>
@@ -227,14 +229,14 @@ class SuaDieuHoa extends React.Component {
 						</thead>
 						<tbody>
 							<tr>
-								<td><img src={avt01} alt="..." style={{height: "25px", marginLeft: "10%",}}/></td>
+								<td><img src={avt01} alt="..." style={{ height: "25px", marginLeft: "10%", }} /></td>
 								<td>dieuhoa360.com</td>
 								<td>Điện Lạnh Quang Thiện</td>
-								<td><Icon style={{marginLeft: "20%"}}>grade</Icon><Icon>grade</Icon><Icon>grade</Icon><Icon>grade</Icon><Icon>grade</Icon></td>
+								<td><Icon style={{ marginLeft: "20%" }}>grade</Icon><Icon>grade</Icon><Icon>grade</Icon><Icon>grade</Icon><Icon>grade</Icon></td>
 							</tr>
 						</tbody>
 					</table>
-			
+
 				</GridItem>
 
 				<GridItem xs>

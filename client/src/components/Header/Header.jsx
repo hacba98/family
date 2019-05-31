@@ -32,12 +32,16 @@ function Header({ ...props }) {
           Giới thiệu
         </Typography>
         </NavLink>
-        
+
+        <Typography className={classes.grow}></Typography>
+
         <NavLink to="/dichvu">
         <Typography className={classes.grow}>
           Dịch vụ
         </Typography>
         </NavLink>
+
+        <Typography className={classes.grow}></Typography>
 
         <NavLink to="/dat_dv_nhanh">
         <Typography className={classes.grow}>
@@ -45,13 +49,17 @@ function Header({ ...props }) {
         </Typography>
         </NavLink>
 
-        <NavLink to="/dashboard">
+        <Typography className={classes.grow}></Typography>
+
+        <NavLink to="/lich_su">
         <Typography className={classes.grow}>
-          Góc cho bạn
+          Lịch sử
         </Typography>
         </NavLink>
 
-        <NavLink to="/dashboard">
+        <Typography className={classes.grow}></Typography>
+
+        <NavLink to="#">
         <Typography className={classes.grow}>
           Liên hệ
         </Typography>

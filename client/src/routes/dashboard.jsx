@@ -13,9 +13,6 @@ import Wizard from "views/Forms/Wizard.jsx";
 import RegularTables from "views/Tables/RegularTables.jsx";
 import ExtendedTables from "views/Tables/ExtendedTables.jsx";
 import ReactTables from "views/Tables/ReactTables.jsx";
-import GoogleMaps from "views/Maps/GoogleMaps.jsx";
-import FullScreenMap from "views/Maps/FullScreenMap.jsx";
-import VectorMap from "views/Maps/VectorMap.jsx";
 import Charts from "views/Charts/Charts.jsx";
 import DichVu01 from "views/Charts/DichVu01.jsx";
 import DichVu02 from "views/Charts/DichVu02.jsx";
@@ -24,6 +21,7 @@ import DichVu04 from "views/Charts/DichVu04.jsx";
 import DichVu05 from "views/Charts/DichVu05.jsx";
 import Calendar from "views/Calendar/Calendar.jsx";
 import Widgets from "views/Widgets/Widgets.jsx";
+import History from "views/History/History.jsx";
 import pagesRoutes from "./pages.jsx";
 
 import SuaDieuHoa from "views/Charts/SuaDieuHoa.jsx";
@@ -47,7 +45,6 @@ import DashboardIcon from "@material-ui/icons/Dashboard";
 import Image from "@material-ui/icons/Image";
 import Apps from "@material-ui/icons/Apps";
 import GridOn from "@material-ui/icons/GridOn";
-import Place from "@material-ui/icons/Place";
 import WidgetsIcon from "@material-ui/icons/Widgets";
 import DateRange from "@material-ui/icons/DateRange";
 
@@ -250,36 +247,10 @@ var dashRoutes = [
       }
     ]
   },
-  {
-    collapse: true,
-    path: "/maps",
-    name: "Maps",
-    state: "openMaps",
-    icon: Place,
-    views: [
-      {
-        path: "/maps/google-maps",
-        name: "Google Maps",
-        mini: "GM",
-        component: GoogleMaps
-      },
-      {
-        path: "/maps/full-screen-maps",
-        name: "Full Screen Map",
-        mini: "FSM",
-        component: FullScreenMap
-      },
-      {
-        path: "/maps/vector-maps",
-        name: "Vector Map",
-        mini: "VM",
-        component: VectorMap
-      }
-    ]
-  },
   { path: "/widgets", name: "Widgets", icon: WidgetsIcon, component: Widgets },
   { path: "/dichvu", name: "Widgets", icon: WidgetsIcon, component: Charts },
   { path: "/dat_dv_nhanh", name: "Calendar", icon: DateRange, component: Calendar },
+  { path: "/lich_su", component: History },
   // { redirect: true, path: "/", pathTo: "/dashboard", name: "Dashboard" }
 ];
 export default dashRoutes;

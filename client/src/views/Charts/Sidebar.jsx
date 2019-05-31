@@ -24,12 +24,10 @@ class Sidebar extends React.Component {
 
     return (
       <ListGroup >
-
         <ListGroupItem active style={{ fontWeight: "bold", height: "50px", fontSize: "20px" }}>
           <img src={icon01} alt="..." width="32px" height="32px%"></img> Danh mục dịch vụ
-            </ListGroupItem>
-
-
+        </ListGroupItem>
+        
         <NavLink to="/thiet_bi_gia_dinh">
           <ListGroupItem onClick={this.handleClick} action style={{ height: "50px", fontSize: "18px" }}>
             <img src={icon02} alt="..." width="32px" height="32px%"></img> Sửa thiết bị gia đình
