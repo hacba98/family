@@ -4,9 +4,27 @@ export function addnewFeedback(obj) {
   const newFeedback = new Feedback({
     username: obj.username,
     content: obj.content,
-    repairman_id: obj.repairman_id
+    rating: obj.rating
   });
   return newFeedback.save();
+}
+
+export function viewAll(res) {
+  let rate = null;
+  Feedback.find({})
+    .sort("-time")
+    .then(lst => {
+      rate = lst.reduce((rate, num) => {
+        return rate + num.rating;
+      }, 0);
+      res.status(200).json({
+        data: {
+          count: lst.length,
+          rating: rate / lst.length,
+          lstFb: lst
+        }
+      });
+    });
 }
 
 export function deleteFeedback(obj, cb) {

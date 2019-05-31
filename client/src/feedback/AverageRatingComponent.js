@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
@@ -28,7 +28,7 @@ const styles = {
 
 function AverageRatingComponent(props) {
   const { classes } = props;
-  const bull = <span className={classes.bullet}>•</span>;
+  //const bull = <span className={classes.bullet}>•</span>;
 
   return (
     <Card className={classes.card}>
@@ -39,13 +39,13 @@ function AverageRatingComponent(props) {
       </CardContent>
       <CardContent>
         <Typography variant="h1" component="h2">
-          4.6
+          {props.rating}
         </Typography>
         <StarRatings
-            rating={4.403}
-            starDimension="20px"
-            starSpacing="15px"
-            starRatedColor="orange"
+          rating={props.rating}
+          starDimension="20px"
+          starSpacing="10px"
+          starRatedColor="orange"
         />
       </CardContent>
     </Card>

@@ -1,22 +1,23 @@
-import React from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
-import Button from "@material-ui/core/Button";
-import Divider from "@material-ui/core/Divider"
+// import Button from "@material-ui/core/Button";
+// import Divider from "@material-ui/core/Divider";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import { withStyles } from "@material-ui/core/styles";
 import FeedbackCard from "./FeedbackCard";
-import LazyLoad from "react-lazyload";
-import AverageRatingComponent from './AverageRatingComponent'
-import TotalRatingComponent from './TotalRatingComponent'
-import RatingBoard from './RatingBoard'
+// import LazyLoad from "react-lazyload";
+import AverageRatingComponent from "./AverageRatingComponent";
+import TotalRatingComponent from "./TotalRatingComponent";
+import RatingBoard from "./RatingBoard";
+import Axios from "axios";
 
 const styles = theme => ({
   appBar: {
     position: "relative"
   },
-  wraper:{
+  wraper: {
     backgroundColor: "#EEEEEE"
   },
   icon: {
@@ -63,152 +64,85 @@ const styles = theme => ({
   }
 });
 
-function Album(props) {
-  const { classes } = props;
+class Album extends Component {
+  state = {
+    count: 0,
+    rating: 0,
+    lstFb: []
+  };
 
-  return (
-    <React.Fragment>
-      <main className={classes.wraper}>
-        {/* Hero unit */}
-        <div className={classes.heroUnit}>
-          <div className={classes.heroContent}>
-            <Typography
-              component="h1"
-              variant="h2"
-              align="center"
-              color="textPrimary"
-              gutterBottom
-            >
-              LawReading
-            </Typography>
-            <Typography
-              variant="h6"
-              align="center"
-              color="textSecondary"
-              paragraph
-            >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-            </Typography>
-            <div className={classes.heroButtons}>
-              <Grid container spacing={16} justify="center">
-                <Grid item>
-                  <Button variant="contained" color="primary">
-                    Click to submit review
-                  </Button>
-                </Grid>
-                <Grid item>
-                  <Button variant="outlined" color="primary">
-                    View other reviews
-                  </Button>
-                </Grid>
-              </Grid>
+  componentDidMount() {
+    Axios.get("http://localhost:8000/feedback/viewFB")
+      .then(data => {
+        this.setState({
+          count: data.data.data.count,
+          rating: data.data.data.rating,
+          lstFb: data.data.data.lstFb
+        });
+        console.log(data);
+      })
+      .catch(e => alert(e));
+  }
+
+  render() {
+    const { classes } = this.props;
+
+    return (
+      <React.Fragment>
+        <main className={classes.wraper}>
+          {/* Hero unit */}
+          <div className={classes.heroUnit}>
+            <div className={classes.heroContent}>
+              <Typography
+                component="h1"
+                variant="h2"
+                align="center"
+                color="textPrimary"
+                gutterBottom
+              >
+                Feedback
+              </Typography>
             </div>
           </div>
-        </div>
-        <div className={classNames(classes.layout, classes.cardGrid)}>
-          <Grid container align spacing={24}>
-            <Grid item md={3}>
-                  <AverageRatingComponent/>
-            </Grid> 
-            <Grid item md={6}>
-                <RatingBoard/>
-            </Grid>  
-            <Grid item md={3}>
-                <TotalRatingComponent/>
-            </Grid>       
-          </Grid>
-        </div>
-        <div className={classNames(classes.layout, classes.cardGrid)}>
-          <Grid container direction="row" alignItems="center" spacing={24}>
-            <Grid item md={12}>
-                <FeedbackCard />
+          <div className={classNames(classes.layout, classes.cardGrid)}>
+            <Grid container align spacing={24}>
+              <Grid item md={3}>
+                <AverageRatingComponent rating={this.state.rating} />
+              </Grid>
+              <Grid item md={6}>
+                <RatingBoard />
+              </Grid>
+              <Grid item md={3}>
+                <TotalRatingComponent count={this.state.count} />
+              </Grid>
             </Grid>
-            <Grid item md={12}>
-                <FeedbackCard />
+          </div>
+          <div className={classNames(classes.layout, classes.cardGrid)}>
+            <Grid container direction="row" alignItems="center" spacing={24}>
+              {this.state.lstFb.map(ele => (
+                <Grid item md={12}>
+                  <FeedbackCard {...ele} />
+                </Grid>
+              ))}
             </Grid>
-            <Grid item md={12}>
-                <FeedbackCard />
-            </Grid>
-            <Grid item md={12}>
-                <FeedbackCard />
-            </Grid>
-            <Grid item md={12}>
-                <FeedbackCard />
-            </Grid>
-            <Grid item md={12}>
-                <FeedbackCard />
-            </Grid>
-            <Grid item md={12}>
-                <FeedbackCard />
-            </Grid>
-            <Grid item md={12}>
-                <FeedbackCard />
-            </Grid>
-            <Grid item md={12}>
-                <FeedbackCard />
-            </Grid>
-            <Grid item md={12}>
-                <FeedbackCard />
-            </Grid>
-            <LazyLoad height={200} offset={100}>
-              <Grid item md={12}>
-                  <FeedbackCard />
-              </Grid>
-              <Grid item md={12}>
-                <FeedbackCard />
-              </Grid>
-              <Grid item md={12}>
-                  <FeedbackCard />
-              </Grid>
-              <Grid item md={12}>
-                  <FeedbackCard />
-              </Grid>
-              <Grid item md={12}>
-                  <FeedbackCard />
-              </Grid>
-              <Grid item md={12}>
-                  <FeedbackCard />
-              </Grid>
-              <Grid item md={12}>
-                  <FeedbackCard />
-              </Grid>
-              <Grid item md={12}>
-                  <FeedbackCard />
-              </Grid>
-              <Grid item md={12}>
-                  <FeedbackCard />
-              </Grid>
-              <Grid item md={12}>
-                  <FeedbackCard />
-              </Grid>
-              <Grid item md={12}>
-                  <FeedbackCard />
-              </Grid>
-              <Grid item md={12}>
-                  <FeedbackCard />
-              </Grid>
-            </LazyLoad>
-          </Grid>
-        </div>
-      </main>
-      <footer className={classes.footer}>
-        <Typography variant="h6" align="center" gutterBottom>
-          Footer
-        </Typography>
-        <Typography
-          variant="subtitle1"
-          align="center"
-          color="textSecondary"
-          component="p"
-        >
-          Something here to give the footer a purpose!
-        </Typography>
-      </footer>
-    </React.Fragment>
-  );
+          </div>
+        </main>
+        <footer className={classes.footer}>
+          <Typography variant="h6" align="center" gutterBottom>
+            Footer
+          </Typography>
+          <Typography
+            variant="subtitle1"
+            align="center"
+            color="textSecondary"
+            component="p"
+          >
+            Something here to give the footer a purpose!
+          </Typography>
+        </footer>
+      </React.Fragment>
+    );
+  }
 }
 
 Album.propTypes = {
