@@ -11,13 +11,12 @@ import icon03 from "assets/img/icon/icon03.jpg"
 import icon04 from "assets/img/icon/icon04.jpg"
 import icon05 from "assets/img/icon/icon05.jpg"
 import icon06 from "assets/img/icon/icon06.jpg"
-import {NavLink} from "react-router-dom";
 
 class Sidebar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      
+
     };
   }
 
@@ -43,18 +42,23 @@ class Sidebar extends React.Component {
             </ListGroupItem>
         </NavLink>
 
-        <NavLink to="/xay_dung_dien_nuoc">
+        <NavLink to="/dich_vu_van_phong">
           <ListGroupItem onClick={this.handleClick} action style={{ height: "50px", fontSize: "18px" }}>
             <img src={icon04} alt="..." width="32px" height="32px%"></img> Dịch vụ văn phòng
             </ListGroupItem>
         </NavLink>
 
-        <ListGroupItem onClick={this.handleClick} action style={{ height: "50px", fontSize: "18px" }}>
-          <img src={icon05} alt="..." width="32px" height="32px%"></img> Ô tô, xe điện, xe máy
+        <NavLink to="/o_to_xe_dien_xe_may">
+          <ListGroupItem onClick={this.handleClick} action style={{ height: "50px", fontSize: "18px" }}>
+            <img src={icon05} alt="..." width="32px" height="32px%"></img> Ô tô, xe điện, xe máy
             </ListGroupItem>
-        <ListGroupItem onClick={this.handleClick} action style={{ height: "50px", fontSize: "18px" }}>
-          <img src={icon06} alt="..." width="32px" height="32px%"></img> Dịch vụ gia đình
+        </NavLink>
+
+        <NavLink to="/dich_vu_gia_dinh">
+          <ListGroupItem onClick={this.handleClick} action style={{ height: "50px", fontSize: "18px" }}>
+            <img src={icon06} alt="..." width="32px" height="32px%"></img> Dịch vụ gia đình
             </ListGroupItem>
+        </NavLink>
       </ListGroup>
     );
   }

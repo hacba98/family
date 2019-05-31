@@ -8,6 +8,7 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from '@material-ui/core/Typography';
 import InputBase from '@material-ui/core/InputBase';
+import {NavLink} from "react-router-dom";
 
 // material-ui icons
 import SearchIcon from '@material-ui/icons/Search';
@@ -26,21 +27,35 @@ function Header({ ...props }) {
     <AppBar className={classes.appBar + appBarClasses}>
       <Toolbar className={classes.container}>
         <div className={classes.flex2} />
+        <NavLink to="/dashboard">
         <Typography className={classes.grow}>
           Giới thiệu
         </Typography>
+        </NavLink>
+        
+        <NavLink to="/dichvu">
         <Typography className={classes.grow}>
           Dịch vụ
         </Typography>
+        </NavLink>
+
+        <NavLink to="/dat_dv_nhanh">
         <Typography className={classes.grow}>
-          Đăng ký nhận việc
+          Đặt dịch vụ nhanh
         </Typography>
+        </NavLink>
+
+        <NavLink to="/dashboard">
         <Typography className={classes.grow}>
           Góc cho bạn
         </Typography>
+        </NavLink>
+
+        <NavLink to="/dashboard">
         <Typography className={classes.grow}>
           Liên hệ
         </Typography>
+        </NavLink>
 
         <div className={classes.flex} />
 

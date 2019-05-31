@@ -34,7 +34,14 @@ class RegularForms extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      checked: [24, 22],
+      danhMuc: "",
+      dichVu: "",
+      sdt: "",
+      tenkh: "",
+      diaChi: "",
+      noiDung: "",
+      ngay: "",
+      gio: ""
     };
   }
 
