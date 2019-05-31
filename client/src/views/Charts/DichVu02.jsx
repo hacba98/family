@@ -1,10 +1,11 @@
 import React from "react";
 import GridContainer from "components/Grid/GridContainer.jsx";
 import GridItem from "components/Grid/GridItem";
-import { ListGroup, ListGroupItem } from 'reactstrap';
 import Card from "components/Card/Card.jsx";
 import CardHeader from "components/Card/CardHeader.jsx";
 import CardBody from "components/Card/CardBody.jsx";
+import Sidebar from "./Sidebar.jsx";
+import { NavLink } from "react-router-dom";
 
 import withStyles from "@material-ui/core/styles/withStyles";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -27,12 +28,8 @@ import thosat from "assets/img/image/thosat.jpg";
 import tieucanh from "assets/img/image/tieucanh.jpg";
 import sofa from "assets/img/image/sofa.jpg";
 
-import icon01 from "assets/img/icon/icon01.png";
-import icon02 from "assets/img/icon/icon02.jpg";
 import icon03 from "assets/img/icon/icon03.jpg";
-import icon04 from "assets/img/icon/icon04.jpg";
-import icon05 from "assets/img/icon/icon05.jpg";
-import icon06 from "assets/img/icon/icon06.jpg";
+
 
 const ColoredLine = ({ color }) => (
 	<hr
@@ -61,67 +58,83 @@ class DichVu02 extends React.Component {
 		const litsItem = [
       {
 				name: "Sửa điện tại nhà",
-				img: suadien
+				img: suadien,
+				url: "/sua_dien"
 			},
 			{
 				name: "Thợ sửa khóa",
-				img: suakhoa
+				img: suakhoa,
+				url: "/sua_khoa"
 			},
 			{
 				name: "Sửa máy bơm nước",
-				img: bomnuoc
+				img: bomnuoc,
+				url: "/bom_nuoc"
 			},
 			{
 				name: "Thợ sửa ống nước, thiết bị nhà vệ sinh",
-				img: ongnuoc
+				img: ongnuoc,
+				url: "/#"
 			},
 			{
 				name: "Chống thấm, chống dột, làm mái",
-				img: chongtham
+				img: chongtham,
+				url: "/#"
 			},
 			{
 				name: "Thông tắc bồn cầu, hút bể phốt",
-				img: boncau
+				img: boncau,
+				url: "/#"
 			},
 			{
 				name: "Sửa chữa, bảo dưỡng, lắp mới cửa cuốn",
-				img: cuacuon
+				img: cuacuon,
+				url: "/#"
 			},
 			{
 				name: "Sơn sửa, xây trát nội ngoại thất",
-				img: noingoaithat
+				img: noingoaithat,
+				url: "/#"
 			},
 			{
 				name: "Dịch vị thiết kế kiến trúc",
-				img: kientruc
+				img: kientruc,
+				url: "/#"
 			},
 			{
 				name: "Thay thế sửa chữa đèn chiếu sáng LED",
-				img: led
+				img: led,
+				url: "/#"
 			},
 			{
 				name: "Sửa chữa đồ gỗ",
-				img: dogo
+				img: dogo,
+				url: "/#"
 			},
 			{
 				name: "Khoan cắt, phá dỡ công trình",
-				img: congtrinh
+				img: congtrinh,
+				url: "/#"
 			},
 			{
 				name: "Dịch vụ nhôm kính",
-				img: nhomkinh
+				img: nhomkinh,
+				url: "/#"
 			},
 			{
 				name: "Thợ sắt, khung giàn",
-				img: thosat
+				img: thosat,
+				url: "/#"
 			},
 			{
 				name: "Sân vườn, hồ cá, tiểu cảnh",
-				img: tieucanh
+				img: tieucanh,
+				url: "/#"
 			},
 			{
 				name: "Sửa ghế sofa",
-				img: sofa
+				img: sofa,
+				url: "/#"
 			}
 		]
 		return (
@@ -130,26 +143,7 @@ class DichVu02 extends React.Component {
 				</GridItem>
 
 				<GridItem xs={2.5}>
-					<ListGroup >
-						<ListGroupItem active style={{ fontWeight: "bold", height: "50px", fontSize: "20px" }}>
-							<img src={icon01} alt="..." width="32px" height="32px%"></img> Danh mục dịch vụ
-            </ListGroupItem>
-						<ListGroupItem onClick={this.handleClick} action style={{ height: "50px", fontSize: "18px" }}>
-							<img src={icon02} alt="..." width="32px" height="32px%"></img> Sửa thiết bị gia đình
-            </ListGroupItem>
-						<ListGroupItem onClick={this.handleClick} action style={{ height: "50px", fontSize: "18px" }}>
-							<img src={icon03} alt="..." width="32px" height="32px%"></img> Xây dựng, điện nước
-            </ListGroupItem>
-						<ListGroupItem onClick={this.handleClick} action style={{ height: "50px", fontSize: "18px" }}>
-							<img src={icon04} alt="..." width="32px" height="32px%"></img> Dịch vụ văn phòng
-            </ListGroupItem>
-						<ListGroupItem onClick={this.handleClick} action style={{ height: "50px", fontSize: "18px" }}>
-							<img src={icon05} alt="..." width="32px" height="32px%"></img> Ô tô, xe điện, xe máy
-            </ListGroupItem>
-						<ListGroupItem onClick={this.handleClick} action style={{ height: "50px", fontSize: "18px" }}>
-							<img src={icon06} alt="..." width="32px" height="32px%"></img> Dịch vụ gia đình
-            </ListGroupItem>
-					</ListGroup>
+					<Sidebar/>
 				</GridItem >
 
 				<GridItem xs={8}>
@@ -167,6 +161,7 @@ class DichVu02 extends React.Component {
 						{litsItem.map(
 							(item) => {
 								return <GridItem xs={12} sm={12} md={4}>
+								<NavLink to={item.url}>
 									<Card product className={classes.cardHover}>
 										<CardHeader image className={classes.cardHeaderHover}>
 											<a href="#pablo" onClick={e => e.preventDefault()}>
@@ -181,6 +176,7 @@ class DichVu02 extends React.Component {
 											</h3>
 										</CardBody>
 									</Card>
+									</NavLink>
 								</GridItem>
 							}
 						)}

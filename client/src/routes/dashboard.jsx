@@ -278,8 +278,8 @@ var dashRoutes = [
     ]
   },
   { path: "/widgets", name: "Widgets", icon: WidgetsIcon, component: Widgets },
-  { path: "/charts", name: "Widgets", icon: WidgetsIcon, component: Charts },
-  { path: "/calendar", name: "Calendar", icon: DateRange, component: Calendar },
+  { path: "/dichvu", name: "Widgets", icon: WidgetsIcon, component: Charts },
+  { path: "/dat_dv_nhanh", name: "Calendar", icon: DateRange, component: Calendar },
   // { redirect: true, path: "/", pathTo: "/dashboard", name: "Dashboard" }
 ];
 export default dashRoutes;
