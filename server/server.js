@@ -14,6 +14,7 @@ import config from "./config";
 // Load api
 import auth from "./routes/auth.routes";
 import post from "./routes/post.routes";
+import feedback from "./routes/feedback.routes";
 
 const app = new Express();
 
@@ -30,6 +31,7 @@ app.use(compression());
 app.use(Express.static(path.resolve(__dirname, "../dist/client")));
 app.use("/auth", auth);
 app.use("/post", post);
+app.use("/feedback", feedback);
 
 // Set native promises as mongoose promise
 mongoose.Promise = global.Promise;

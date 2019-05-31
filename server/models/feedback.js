@@ -4,7 +4,7 @@ const FeedbackSchema = Schema({
   username: { type: String, required: true },
   content: { type: String, required: true },
   time: { type: Date, default: Date.now() },
-  repairman_id: { type: SchemaTypes.ObjectId, required: true }
+  rating: { type: Number, required: true }
 });
 
 const Feedback = mongoose.model("Feedback", FeedbackSchema);

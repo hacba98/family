@@ -2,14 +2,18 @@ import * as FeedbackService from "../services/feedback.service";
 
 export function postNewFeedback(req, res) {
   const { username } = req.params;
-  const { content, repairman_id } = req.body;
+  const { content, rating } = req.body;
 
-  if (!username || !content || !repairman_id)
-    return res.status(403).json({ error: "Missing required data field(s)." });
+  // if (!username || !content || !rating)
+  //   return res.status(403).json({ error: "Missing required data field(s)." });
 
-  return FeedbackService.addnewFeedback({ username, content, repairman_id })
+  return FeedbackService.addnewFeedback({ username, content, rating })
     .then(_ => res.status(200).end())
     .catch(err => console.log("give-feedback-error", err));
+}
+
+export function viewFeedback(req, res) {
+  FeedbackService.viewAll(res);
 }
 
 export function deleteFeedback(req, res) {

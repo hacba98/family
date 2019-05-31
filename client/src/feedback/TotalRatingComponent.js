@@ -29,13 +29,11 @@ function TotalRatingComponent(props) {
   return (
     <Card className={classes.card}>
       <CardContent>
-        <Typography className={classes.text}>
-          Total Rating with Reviews
-        </Typography>
+        <Typography className={classes.text}>Số lượng người dùng</Typography>
       </CardContent>
       <CardContent>
         <Typography variant="h1" component="h2">
-          512
+          {props.count}
         </Typography>
       </CardContent>
     </Card>
