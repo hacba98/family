@@ -2,20 +2,31 @@ import Post from "../models/post";
 
 export function addNewRequest(user_id, body) {
   // making request from body input
-  let address = JSON.parse(body.address);
+  //let address = JSON.parse(body.address);
+  // const newPost = new Post({
+  //   user_id: user_id,
+  //   dichvu: { district: address.district, street: address.street },
+  //   phone: body.phone,
+  //   product_type: body.product_type || "UNKNOWN",
+  //   product_name: body.product_name,
+  //   description: body.description
+  // });
   const newPost = new Post({
     user_id: user_id,
-    address: { district: address.district, street: address.street },
+    dichvu: body.dichvu,
+    dichvucon: body.dichvucon,
     phone: body.phone,
-    product_type: body.product_type || "UNKNOWN",
-    product_name: body.product_name,
-    description: body.description
+    user_name: body.user_name,
+    address: body.address,
+    detail: body.detail,
+    date: body.date,
+    status: "PROCESSING"
   });
 
   // get request cordinate
   // TODO
-  newPost.x_cordinate = 0;
-  newPost.y_cordinate = 0;
+  // newPost.x_cordinate = 0;
+  // newPost.y_cordinate = 0;
 
   return newPost.save();
 }
@@ -45,7 +56,9 @@ export function completeRequest(post_id) {
 }
 
 export function viewAll() {
-  return Post.find({}).select("_id title description address");
+  return Post.find({}).select(
+    "_id user_name dichvu dichvucon address detail date"
+  );
 }
 
 export function viewDetail(post_id) {

@@ -3,10 +3,26 @@ import Post from "../models/post";
 
 export function postRequest(req, res) {
   const { user_id } = req.params;
-  const { address, product_type, product_name, description, phone } = req.body;
+  const {
+    dichvu,
+    dichvucon,
+    phone,
+    user_name,
+    address,
+    detail,
+    date
+  } = req.body;
 
   // check if provided enough data
-  if (!user_id || !address || !product_name || !description || !phone)
+  if (
+    !user_id ||
+    !dichvu ||
+    !dichvucon ||
+    !detail ||
+    !phone ||
+    !user_name ||
+    !address
+  )
     return res.status(403).json({ error: "Missing required data field(s)." });
 
   return PostService.addNewRequest(user_id, req.body)
