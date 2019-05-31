@@ -1,0 +1,27 @@
+.AverageRatingContainer a {
+    position: relative;
+    font-size: 2em;
+}
+
+.AverageRatingContainer a:after {
+    content: "\2606";
+    color: #bebebe;
+}
+
+.AverageRatingContainer a.star-selected div {
+    color: #edb867;
+    width: 0;
+    height: 100%;
+    overflow: hidden;
+    display: inline-block;
+    position: absolute;
+}
+
+
+.AverageRatingContainer__Rating {
+    font-size: 4em;
+}
+
+.AverageRatingContainer {
+    text-align: center;
+}
