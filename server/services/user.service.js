@@ -25,7 +25,7 @@ export function getUser(
  * Service function add new user to database
  * @param {Object} body Request body object: MUST contain name, email, password.
  */
-export async function addUser(body) {
+export async function addUser(body, role) {
   const newUser = new User({
     username: body.username,
     password: body.password,
@@ -34,6 +34,9 @@ export async function addUser(body) {
     fullname: body.fullname,
     isMale: body.isMale
   });
+
+  if (role == "USER") newUser.role = "USER";
+  else newUser.role = "ADMIN";
 
   // Sanitialize raw data
   newUser.username = sanitizeHtml(newUser.username);

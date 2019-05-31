@@ -7,7 +7,11 @@ const UserSchema = new Schema({
   address: { type: String }, // Input
   fullname: { type: String },
   phone: { type: Number }, // Input
-  isMale: { type: Boolean }
+  isMale: { type: Boolean },
+  role: {
+    type: String,
+    enum: ["USER", "ADMIN"]
+  }
 });
 
 const User = mongoose.model("User", UserSchema);

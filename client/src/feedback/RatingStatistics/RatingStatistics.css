@@ -1,0 +1,43 @@
+.RatingStatisticsContainer a {
+    position: relative;
+    font-size: 1.5em;
+}
+
+.RatingStatisticsContainer {
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.RatingStatisticsContainer a:after {
+    content: "\2606";
+    color: #bebebe;
+}
+
+.RatingStatisticsContainer a div {
+    color: #edb867;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: inline-block;
+    position: absolute;
+}
+
+.RatingStatisticsContainer tr td {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+.RatingStatisticsContainer tr td:first-child {
+    text-align: right;
+}
+
+.RatingStatisticsContainer tr td:nth-child(2) {
+    width: 350px;
+}
+
+.RatingStatistics__Percentage {
+    width: 100%;
+    height: 1em;
+    background: crimson;
+    border-radius: 2px;
+}
