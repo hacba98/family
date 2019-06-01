@@ -13,6 +13,16 @@ import Button from "components/CustomButtons/Button.jsx";
 import CardIcon from "components/Card/CardIcon.jsx";
 import { cardTitle } from "assets/jss/material-dashboard-pro-react.jsx";
 
+import Dialog from "@material-ui/core/Dialog";
+import DialogActions from "@material-ui/core/DialogActions";
+import DialogContent from "@material-ui/core/DialogContent";
+import DialogContentText from "@material-ui/core/DialogContentText";
+import DialogTitle from "@material-ui/core/DialogTitle";
+import { TextField } from "@material-ui/core";
+import StarRatings from "react-star-ratings";
+import 'feedback/FeedbackForm.css';
+
+
 const styles = {
 	cardIconTitle: {
 		...cardTitle,
@@ -22,18 +32,18 @@ const styles = {
 };
 
 const fadeData = [
-	["Sữa quạt điện", "Lý Thường Kiệt", "Quận 10", "Mới đăng", "Đang sắp xếp", "1/6/2019"],
-	["Sữa quạt điện", "Lý Thường Kiệt", "Quận 10", "Mới đăng", "Đang sắp xếp", "1/6/2019"],
-	["Sữa quạt điện", "Lý Thường Kiệt", "Quận 10", "Mới đăng", "Đang sắp xếp", "1/6/2019"],
-	["Sữa quạt điện", "Lý Thường Kiệt", "Quận 10", "Mới đăng", "Đang sắp xếp", "1/6/2019"],
-	["Sữa quạt điện", "Lý Thường Kiệt", "Quận 10", "Mới đăng", "Đang sắp xếp", "1/6/2019"],
-	["Sữa quạt điện", "Lý Thường Kiệt", "Quận 10", "Mới đăng", "Đang sắp xếp", "1/6/2019"],
-	["Sữa quạt điện", "Lý Thường Kiệt", "Quận 10", "Mới đăng", "Đang sắp xếp", "1/6/2019"],
-	["Sữa quạt điện", "Lý Thường Kiệt", "Quận 10", "Mới đăng", "Đang sắp xếp", "1/6/2019"],
-	["Sữa quạt điện", "Lý Thường Kiệt", "Quận 10", "Mới đăng", "Đang sắp xếp", "1/6/2019"],
-	["Sữa quạt điện", "Lý Thường Kiệt", "Quận 10", "Mới đăng", "Đang sắp xếp", "1/6/2019"],
-	["Sữa quạt điện", "Lý Thường Kiệt", "Quận 10", "Mới đăng", "Đang sắp xếp", "1/6/2019"],
-	["Sữa quạt điện", "Lý Thường Kiệt", "Quận 10", "Mới đăng", "Đang sắp xếp", "1/6/2019"],
+	["Sữa quạt điện", "Lý Thường Kiệt, Quận 10", "Mới đăng", "Đang sắp xếp", "1/6/2019"],
+	["Sữa quạt điện", "Lý Thường Kiệt, Quận 10", "Mới đăng", "Đang sắp xếp", "1/6/2019"],
+	["Sữa quạt điện", "Lý Thường Kiệt, Quận 10", "Mới đăng", "Đang sắp xếp", "1/6/2019"],
+	["Sữa quạt điện", "Lý Thường Kiệt, Quận 10", "Mới đăng", "Đang sắp xếp", "1/6/2019"],
+	["Sữa quạt điện", "Lý Thường Kiệt, Quận 10", "Mới đăng", "Đang sắp xếp", "1/6/2019"],
+	["Sữa quạt điện", "Lý Thường Kiệt, Quận 10", "Mới đăng", "Đang sắp xếp", "1/6/2019"],
+	["Sữa quạt điện", "Lý Thường Kiệt, Quận 10", "Mới đăng", "Đang sắp xếp", "1/6/2019"],
+	["Sữa quạt điện", "Lý Thường Kiệt, Quận 10", "Mới đăng", "Đang sắp xếp", "1/6/2019"],
+	["Sữa quạt điện", "Lý Thường Kiệt, Quận 10", "Mới đăng", "Đang sắp xếp", "1/6/2019"],
+	["Sữa quạt điện", "Lý Thường Kiệt, Quận 10", "Mới đăng", "Đang sắp xếp", "1/6/2019"],
+	["Sữa quạt điện", "Lý Thường Kiệt, Quận 10", "Mới đăng", "Đang sắp xếp", "1/6/2019"],
+	["Sữa quạt điện", "Lý Thường Kiệt, Quận 10", "Mới đăng", "Đang sắp xếp", "1/6/2019"],
 ]
 
 class History extends React.Component {
@@ -47,30 +57,58 @@ class History extends React.Component {
 					dichvu: prop[0],
 					diachi: prop[1],
 					trangthai: prop[2],
-					thoigian: prop[3],
-					thosua: prop[4],
+					thosua: prop[3],
+					thoigian: prop[4],
 					actions: (
 						<div className="actions-right">
-							
+
 							<Tooltip title="Đánh giá" placement="left">
-									<Button
-										justIcon
-										round
-										simple
-										// onClick={() => { this.setData2(prop.action_code); setTimeout(() => { this.openModal() }, 200) }}
-										color="info"
-										className="edit"
-									>
-										<Stars />
-									</Button>
-								</Tooltip>
+								<Button
+									justIcon
+									round
+									simple
+									onClick={() => this.handleClickOpen()}
+									color="info"
+									className="edit"
+								>
+									<Stars />
+								</Button>
+							</Tooltip>
 						</div>
 					)
 				};
-			})
+			}),
+			open: false,
+			feedbackContent: '',
+			rating: 3
 		};
+		this.handleClickOpen = this.handleClickOpen.bind(this);
+		this.changeRating = this.changeRating.bind(this);
+		this.handleClose = this.handleClose.bind(this);
+		this.handleFeedbackOnChange = this.handleFeedbackOnChange.bind(this);
 	}
 
+	handleClose = () => {
+        this.setState({ open: false });
+    };
+
+    handleFeedbackOnChange = (e) => {
+        this.setState({feedbackContent: e.target.value});
+    }
+
+	handleClickOpen = () => {
+		this.setState({ open: true });
+	};
+
+	changeRating = (newRating, name) => {
+		this.setState({
+			rating: newRating
+		});
+	}
+
+	handleFeedbackSubmit = () => {
+		// TODO
+	}
 
 	render() {
 		const { classes } = this.props;
@@ -138,7 +176,7 @@ class History extends React.Component {
 										sortable: false,
 										filterable: false,
 										headerStyle: { fontWeight: "600", fontSize: "15px" },
-										
+
 									}
 								]}
 
@@ -148,6 +186,72 @@ class History extends React.Component {
 							/>
 						</CardBody>
 					</Card>
+				</GridItem>
+				<GridItem xs={12}>
+					<Dialog
+						open={this.state.open}
+						onClose={this.handleClose}
+						aria-labelledby="alert-dialog-title"
+						aria-describedby="alert-dialog-description"
+					>
+						<DialogTitle
+							style={{ background: "crimson", color: "white" }}
+							id="alert-dialog-title"
+						>
+							{"Cảm ơn bạn đã sử dụng dịch vụ của chúng tôi"}
+						</DialogTitle>
+						<DialogContent>
+							<TextField
+								style={{ width: "500px" }}
+								id="standard-multiline-static"
+								multiline
+								rows="4"
+								autoFocus
+								onChange={this.handleFeedbackOnChange}
+								value={this.state.feedbackContent}
+								placeholder="Hãy giúp chúng tôi đánh giá hiệu quả công việc"
+								margin="normal"
+							/>
+
+							<div
+								style={{
+									transform: "scale(0.65)",
+									display: "flex",
+									justifyContent: "center",
+									marginTop: "1em"
+								}}
+							>
+								<StarRatings
+									rating={this.state.rating}
+									starRatedColor="crimson"
+									changeRating={this.changeRating}
+									numberOfStars={5}
+									name="rating"
+									svgIconPath="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
+								/>
+							</div>
+							<div style={{ display: "flex", justifyContent: "center" }}>
+								<DialogContentText id="alert-dialog-description">
+									Hãy đánh giá dịch vụ bạn nhận được
+              					</DialogContentText>
+							</div>
+						</DialogContent>
+						<DialogActions>
+							<Button onClick={this.handleClose} color="primary">
+								CANCEL
+            				</Button>
+							<Button
+								onClick={() => {
+									this.handleFeedbackSubmit();
+									this.handleClose();
+								}}
+								color="secondary"
+								variant="contained"
+							>
+								SEND
+           	 				</Button>
+						</DialogActions>
+					</Dialog>
 				</GridItem>
 			</GridContainer>
 		);

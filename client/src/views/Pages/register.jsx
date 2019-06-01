@@ -31,7 +31,7 @@ export default class Register extends Component {
     if (this.state.confirmPassword !== this.state.password) {
       return alert("Confirm password is not match with password");
     }
-    Axios.post("/auth/register", {
+    Axios.post("http://localhost:8000/auth/register", {
       username: this.state.username,
       password: this.state.password,
       fullname: this.state.fullname,
@@ -39,7 +39,7 @@ export default class Register extends Component {
       address: this.state.address,
       isMale: true // TODO: Concern if this is necessary.
     })
-      .then(response => {
+      .then(() => {
         alert("Register successfully!");
         this.setState({ directToLogin: true });
       })

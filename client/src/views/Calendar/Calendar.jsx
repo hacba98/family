@@ -3,8 +3,6 @@ import React from "react";
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
 
-import axios from "axios";
-
 import Datetime from "react-datetime";
 import FormControl from "@material-ui/core/FormControl";
 import CardIcon from "components/Card/CardIcon.jsx";
@@ -34,6 +32,8 @@ import postFormStyle from "assets/jss/material-dashboard-pro-react/views/postFor
 import { ListGroup, ListGroupItem } from 'reactstrap';
 import Modal from 'react-awesome-modal';
 
+import {postRequest} from "api";
+
 import icon02 from "assets/img/icon/icon02.jpg"
 import icon03 from "assets/img/icon/icon03.jpg"
 import icon04 from "assets/img/icon/icon04.jpg"
@@ -51,20 +51,77 @@ const dichvu = [
 
 const dichvucon = [
   [
-    "Sữa điều hòa, bão dưỡng điều hòa",
-    "Sữa tivi tại nhà",
-    "Sữa quạt điện",
+    "Sửa điều hòa, bão dưỡng điều hòa",
+    "Sửa tivi tại nhà",
+    "Sửa bình nóng lạnh, bão dưỡng tại nhà",
+    "Sửa máy giặt, bão dưỡng máy giặt",
+    "Sửa tủ lạnh, bảo dưỡng, nạp ga tại nhà",
+    "Sửa quạt điện",
+    "Sửa amply, loa, dàn âm thanh tại nhà",
+    "Sửa bếp ga, bếp từ",
+    "Sửa lò vi sóng",
+    "Sữa lò nướng tại nhà",
+    "Sửa máy hút khói, máy hút mùi nhà bếp",
+    "Thuê máy rửa bát, chén, máy sấy...",
+    "Sửa máy rửa bát, chén, đĩa",
+    "Sửa máy lọc nước",
+    "Thiết bị khác",
+    "Gọi dịch vụ thanh lý đồ dùng",
   ],
   [
     "Sửa điện tại nhà",
     "Thợ sửa khóa",
-    "Sửa máy bơm nước"
+    "Sửa máy bơm nước",
+    "Thợ sửa ống nước, thiết bị nhà vệ sinh",
+    "Chống thấm, chống dột, làm mái",
+    "Thông tắc bồn cầu, hút bể phốt",
+    "Sửa chữa, bảo dưỡng, lắp mới cửa cuốn",
+    "Sơn sửa, xây trát nội ngoại thất",
+    "Dịch vị thiết kế kiến trúc",
+    "Thay thế sửa chữa đèn chiếu sáng LED",
+    "Sửa chữa đồ gỗ",
+    "Khoan cắt, phá dỡ công trình",
+    "Dịch vụ nhôm kính",
+    "Thợ sắt, khung giàn",
+    "Sân vườn, hồ cá, tiểu cảnh",
+    "Sửa ghế sofa"
   ],
-  [],
-  [],
-  [],
-  [],
+  ["Sửa chữa lắp đặt Camera",
+    "Sửa chữa máy tính, máy in, phần mềm",
+    "Cài đặt, cấu hình phần mềm",
+    "Mở tài khoản nhận tin mời thầu",
+    "Mực in Siêu tốc, Siêu rẻ, Siêu sạch",
+    "Cartridge mực máy in G&G",
+    "Dịch vụ doanh nghiệp tổng hợp",
+    "Bảo dưỡng máy tính",
+    "Dịch vụ sửa và cho thuê máy photocopy",
+    "Sửa màn hình LCD/LED máy tính",
+    "Sửa điện thoại, máy tính bảng Android",
+    "Sửa iPhone, iPad",
+    "Phục hồi dữ liệu ổ cứng",
+    "Khóa học CNTT cơ bản",
+    "Dịch vụ máy chủ",
+    "Tư vấn CNTT"
+  ],
+  [
+    "Dịch vụ thuê xe máy - 120k/ngày",
+    "Sửa xe đạp điện tại nhà",
+    "Cứu hộ, sửa chữa xe máy",
+    "Cứu hộ, sửa chữa xe ôtô",
+    "Lắp đặt phụ kiện xe hơi tại nhà"
+  ],
+  [
+    "Thanh chắn cửa Ravo - 700.000đ/bộ",
+    "Gọi dịch vụ giúp việc theo giờ",
+    "Gọi dịch vụ giặt là",
+    "Thu gom rác thải điện tử",
+    "Giặt Thảm/Sofa",
+    "Phun thuốc muỗi, diệt mối, côn trùng",
+    "Thay bình nước tinh khiết",
+    "Bánh chưng bà Kiều"
+  ]
 ]
+
 
 class RegularForms extends React.Component {
   constructor(props) {
@@ -96,16 +153,11 @@ class RegularForms extends React.Component {
     this.handleClick1 = this.handleClick1.bind(this);
   }
 
-  handleSubmit(){
-    const {address, dichvu, dichvucon, detail, phoneNumber, name, data} = this.state;
-    return axios.post(
-      "localhost:8000/post/request/" + localStorage.getItem("id"), {
-        address, dichvu, dichvucon, detail, phoneNumber, name, data
-      }, { 
-        headers: { "Authorization": localStorage.getItem("token")}
-      })
-      .then(alert("Yêu cầu dịch vụ thành công")
-    )
+  handleSubmit() {
+    const { address, dichvu, dichvucon, detail, phoneNumber, name, date } = this.state;
+    postRequest(address, dichvu, dichvucon, detail, phoneNumber, name, date)
+    .then(() => {alert("Gửi yêu cầu thành công")})
+    .then(window.location.reload())
   }
 
   getDate(event) {
@@ -257,9 +309,9 @@ class RegularForms extends React.Component {
                   <PhoneIphone />
                 </Button>{" "}
                 <Divider className={classes.divider} />
-                <InputBase type="number" className={classes.input} 
+                <InputBase type="number" className={classes.input}
                   placeholder="Số điện thoại"
-                  onChange={(event) => { this.getPhoneNumber(event) }}  
+                  onChange={(event) => { this.getPhoneNumber(event) }}
                 />
               </Paper>
 
@@ -275,9 +327,9 @@ class RegularForms extends React.Component {
                   <Person />
                 </Button>{" "}
                 <Divider className={classes.divider} />
-                <InputBase className={classes.input} 
+                <InputBase className={classes.input}
                   placeholder="Tên khách hàng"
-                  onChange={(event) => { this.getName(event) }} 
+                  onChange={(event) => { this.getName(event) }}
                 />
               </Paper>
 
@@ -417,11 +469,11 @@ class RegularForms extends React.Component {
                 </ListGroup>
               </Modal>
 
-              <Button color="danger" 
-                onClick = {() => this.handleSubmit()}
+              <Button color="danger"
+                onClick={() => this.handleSubmit()}
                 style={{ marginLeft: "68%", width: "250px", height: "50px", marginTop: "10px", marginBottom: "15px" }}
               >
-                  Gửi yên cầu
+                Gửi yên cầu
               </Button>
             </CardBody>
           </Card>

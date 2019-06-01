@@ -251,6 +251,6 @@ var dashRoutes = [
   { path: "/dichvu", name: "Widgets", icon: WidgetsIcon, component: Charts },
   { path: "/dat_dv_nhanh", name: "Calendar", icon: DateRange, component: Calendar },
   { path: "/lich_su", component: History },
-  // { redirect: true, path: "/", pathTo: "/dashboard", name: "Dashboard" }
+  { redirect: true, path: "/", pathTo: "/dashboard", name: "Dashboard" }
 ];
 export default dashRoutes;

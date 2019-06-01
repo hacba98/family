@@ -1,8 +1,7 @@
 
 import React, { Component } from "react";
 import { Redirect, Link } from "react-router-dom";
-import Axios from "axios";
-
+import { login } from "api"
 import "./login.css";
 
 export default class LoginPage extends Component {
@@ -16,33 +15,13 @@ export default class LoginPage extends Component {
     };
   }
 
-  logInUser = async (username, password) => {
-    try {
-      const { data: token } = await Axios.post("/auth/login", {
-        username,
-        password
-      });
-      this.props.loginSuccess(true, username, token);
-      this.setState({ isLogin: true, username: username });
-    } catch (error) {
-      alert(error);
-      console.log(error);
-    }
-  };
-
   onFormSubmit = async e => {
     e.preventDefault();
     if (this.state.username === "" || this.state.password === "") {
       return alert("Username and password can not be empty");
     }
-    this.logInUser(this.state.username, this.state.password);
-    // const { username, token } = await this.logInUser(
-    //   this.state.username,
-    //   this.state.password
-    // );
-    // localStorage.setItem(username, username);
-    // localStorage.setItem(token, token);
-    // this.setState({ isLogin: true });
+    login(this.state.username, this.state.password)
+    .then(() => this.setState({ isLogin: true}));
   };
 
   onFieldChange = e => {
@@ -79,26 +58,26 @@ export default class LoginPage extends Component {
               onChange={this.onFieldChange}
             />
           </div>
-          {/* <button
+          <button
             type="submit"
             className="btn btn-block btn-success"
             onClick={this.onFormSubmit}
           >
             Login
-          </button> */}
-          <Link
+          </button>
+          {/* <Link
             to="/"
             className="btn btn-block btn-success"
             style={{height: "40px", fontSize: "11px", paddingTop: "10px"}}
           >
             LOGIN
-          </Link>
-          
+          </Link> */}
+
           <hr />
           <Link
             to="/register"
             className="btn btn-block btn-outline-danger mt-3"
-            style={{height: "40px", fontSize: "11px", paddingTop: "10px"}}
+            style={{ height: "40px", fontSize: "11px", paddingTop: "10px" }}
           >
             CREATE A NEW ACCOUNT
           </Link>

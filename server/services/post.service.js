@@ -57,7 +57,7 @@ export function completeRequest(post_id) {
 
 export function viewAll() {
   return Post.find({}).select(
-    "_id user_name dichvu dichvucon address detail date"
+    "_id user_name dichvu dichvucon address detail date phone"
   );
 }
 

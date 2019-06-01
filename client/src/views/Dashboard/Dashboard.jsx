@@ -45,9 +45,9 @@ class Dashboard extends React.Component {
         </GridContainer>
         <br/>
         <div className="row" style={{margin: "50px 30px"}}>
-          <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6" style={{padding: "100px 50px"}}>
-          <p>Hãy để cuộc sống của bạn thảnh thơi hơn!</p>
-          <p>Chúng tôi là công ty tiên phong ứng dụng nền tảng công nghệ vào ngành giúp việc gia đình ở Việt Nam, cho phép bạn cùng người giúp việc chủ động đăng và nhận việc trực tiếp trên ứng dụng web.</p>
+          <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6" style={{padding: "100px 50px"}}>      
+          <p style={{color: "#4a4a4a", fontSize: "16px", fontWeight: 500, fontFamily: '"Quicksand",sans-serif', textAlign: "center", margin: 0}}>Hãy để cuộc sống của bạn thảnh thơi hơn!</p>
+          <p style={{color: "#4a4a4a", fontSize: "16px", fontWeight: 500, fontFamily: '"Quicksand",sans-serif', textAlign: "center", margin: 0}}>Chúng tôi là công ty tiên phong ứng dụng nền tảng công nghệ vào ngành giúp việc gia đình ở Việt Nam, cho phép bạn cùng người giúp việc chủ động đăng và nhận việc trực tiếp trên ứng dụng web.</p>
 
           </div>
           <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
